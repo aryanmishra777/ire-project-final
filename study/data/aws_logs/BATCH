@@ -1,0 +1,10 @@
+batch start 06:48:54: 1 participant(s), 1 worker(s)
+worker 0: P01
+batch done 07:20:26 after 1892s; 1 run file(s) total
+batch start 09:05:56: 7 participant(s), 3 worker(s)
+worker 0: P02,P05,P08
+worker 1: P03,P06
+worker 2: P04,P07
+rerun worker 0: P02,P05,P08
+rerun worker 2: P04,P07
+batch done 10:31:06 after 5110s; 3 run file(s) total

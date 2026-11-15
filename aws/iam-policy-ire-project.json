@@ -1,0 +1,110 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadOnlyLookups",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:Describe*",
+        "ec2:GetConsoleOutput",
+        "servicequotas:GetServiceQuota",
+        "servicequotas:ListServiceQuotas",
+        "budgets:ViewBudget"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "LaunchOnlyTaggedGpuInstances",
+      "Effect": "Allow",
+      "Action": "ec2:RunInstances",
+      "Resource": "arn:aws:ec2:ap-south-2:<ACCOUNT_ID>:instance/*",
+      "Condition": {
+        "StringEquals": {
+          "ec2:InstanceType": ["g6.xlarge", "g6.2xlarge", "g6e.xlarge"],
+          "aws:RequestTag/Project": "ire-project"
+        }
+      }
+    },
+    {
+      "Sid": "LaunchVolumesUpTo200GB",
+      "Effect": "Allow",
+      "Action": "ec2:RunInstances",
+      "Resource": "arn:aws:ec2:ap-south-2:<ACCOUNT_ID>:volume/*",
+      "Condition": {
+        "NumericLessThanEquals": { "ec2:VolumeSize": "200" }
+      }
+    },
+    {
+      "Sid": "LaunchSupportingResources",
+      "Effect": "Allow",
+      "Action": "ec2:RunInstances",
+      "Resource": [
+        "arn:aws:ec2:ap-south-2::image/*",
+        "arn:aws:ec2:ap-south-2:<ACCOUNT_ID>:network-interface/*",
+        "arn:aws:ec2:ap-south-2:<ACCOUNT_ID>:subnet/*",
+        "arn:aws:ec2:ap-south-2:<ACCOUNT_ID>:security-group/*",
+        "arn:aws:ec2:ap-south-2:<ACCOUNT_ID>:key-pair/*"
+      ]
+    },
+    {
+      "Sid": "TagOnlyWhileCreating",
+      "Effect": "Allow",
+      "Action": "ec2:CreateTags",
+      "Resource": "arn:aws:ec2:ap-south-2:<ACCOUNT_ID>:*/*",
+      "Condition": {
+        "StringEquals": { "ec2:CreateAction": ["RunInstances", "CreateSecurityGroup"] }
+      }
+    },
+    {
+      "Sid": "ManageOnlyProjectInstances",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:StartInstances",
+        "ec2:StopInstances",
+        "ec2:RebootInstances",
+        "ec2:TerminateInstances"
+      ],
+      "Resource": "arn:aws:ec2:ap-south-2:<ACCOUNT_ID>:instance/*",
+      "Condition": {
+        "StringEquals": { "ec2:ResourceTag/Project": "ire-project" }
+      }
+    },
+    {
+      "Sid": "CreateTaggedSecurityGroup",
+      "Effect": "Allow",
+      "Action": "ec2:CreateSecurityGroup",
+      "Resource": "arn:aws:ec2:ap-south-2:<ACCOUNT_ID>:security-group/*",
+      "Condition": {
+        "StringEquals": { "aws:RequestTag/Project": "ire-project" }
+      }
+    },
+    {
+      "Sid": "CreateSecurityGroupInVpc",
+      "Effect": "Allow",
+      "Action": "ec2:CreateSecurityGroup",
+      "Resource": "arn:aws:ec2:ap-south-2:<ACCOUNT_ID>:vpc/*"
+    },
+    {
+      "Sid": "EditOnlyProjectSecurityGroups",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:AuthorizeSecurityGroupIngress",
+        "ec2:RevokeSecurityGroupIngress",
+        "ec2:DeleteSecurityGroup"
+      ],
+      "Resource": "arn:aws:ec2:ap-south-2:<ACCOUNT_ID>:security-group/*",
+      "Condition": {
+        "StringEquals": { "ec2:ResourceTag/Project": "ire-project" }
+      }
+    },
+    {
+      "Sid": "DenyEc2OutsideHyderabad",
+      "Effect": "Deny",
+      "Action": "ec2:*",
+      "Resource": "*",
+      "Condition": {
+        "StringNotEquals": { "aws:RequestedRegion": "ap-south-2" }
+      }
+    }
+  ]
+}

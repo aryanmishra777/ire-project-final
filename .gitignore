@@ -1,0 +1,10 @@
+.venv/
+.env
+__pycache__/
+data/bm25_index/
+data/emb_*.npy
+data/*.parquet
+video/build/
+slides/build/
+*.pyc
+

@@ -1,0 +1,2 @@
+NVIDIA L4, 595.112.07
+ollama version is 0.40.16

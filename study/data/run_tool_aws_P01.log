@@ -1,0 +1,102 @@
+[venue] verifying venue links via web search...
+[venue] grounded Program Comprehension (PC) Workshop: None → https://www.pcworkshop.org/programs
+[venue] grounded ICSE: https://icse-conf.org/ → https://www.icse-conferences.org/
+[web] DDG rate-limited its HTTP endpoint — routing searches through the browser for the rest of this run
+/home/ubuntu/tool_w0/browser_render.py:59: LeakWarning: Canvas and WebGL readback return random data, as privacy.resistFingerprinting does in LibreWolf, Tor Browser and Mullvad Browser. Stock Firefox does not do this, so the browser reads as a privacy-hardened Firefox. It is on because the identity claims another OS or GPU than this machine's, whose canvas would show the real one. Pass `canvas_noise=False` to keep stock canvas behaviour.
+If this is intentional, pass `i_know_what_im_doing=True`.
+  with Camoufox(headless=_headless()) as browser:
+[venue] IEEE Transactions on Software Engineering: URL unverifiable (https://www.computer.org/csdl/journal/te) → search-only by name
+[venue] auto-picked Program Comprehension (PC) Workshop, ICSE, ACM SIGSOFT FSE
+[venue] targeting 3 venue(s): Program Comprehension (PC) Workshop, ICSE, ACM SIGSOFT FSE
+[1/4] Understanding query...
+      note: query is ambiguous — auto-picked one sense (run interactively to choose):
+            → Cognitive/Educational: Human mental models and learning of algorithmic processes
+              other sense: Software Engineering: Human understanding of source code and program structure
+              other sense: Sociotechnical: Public understanding and literacy regarding automated decision systems
+              other sense: Formal/Computational: Mathematical properties, complexity, and formal verification of algorithms
+      refined  : "Algorithm comprehension cognitive models"
+      keywords : ['Algorithm comprehension', 'Mental models of algorithms', 'Program comprehension', 'Code comprehension', 'Proof comprehension', 'Computer science education']
+      intent   : theory
+[2/4] Retrieving from crossref,arxiv,venue (limit=50, workers=2)...
+      search   : "Algorithm comprehension cognitive models"  (broad / recall)
+[combined] running crossref, arxiv, venue concurrently...
+[crossref] retrieved 16 records
+[arxiv] retrieved 16 entries
+[venue] Program Comprehension (PC) Workshop: no papers on site — trying official host Researchr (https://conf.researchr.org)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] Program Comprehension (PC) Workshop: fetched 6 page(s) but extracted no papers
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] ICSE: 9 candidate(s)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] ACM SIGSOFT FSE: no papers on site — trying official host ACM Digital Library (https://dl.acm.org)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] ACM SIGSOFT FSE: fetched 12 page(s) but extracted no papers
+[venue] 9 candidate refs from 3 venue(s)
+[web] resolved 9 of 9 candidates
+[combined] crossref → 16 records
+[combined] arxiv → 16 records
+[combined] venue → 9 records
+[combined] merged → 41 after dedupe
+      focus    : "Algorithm comprehension vs program proof comprehension"  (focused / precision)
+[combined] running crossref, arxiv, venue concurrently...
+[crossref] retrieved 16 records
+[arxiv] retrieved 16 entries
+[venue] Program Comprehension (PC) Workshop: no papers on site — trying official host IEEE Xplore (https://ieeexplore.ieee.org)
+[venue] Program Comprehension (PC) Workshop: no papers on site — trying official host ACM Digital Library (https://dl.acm.org)
+[venue] Program Comprehension (PC) Workshop: fetched 1 page(s) but extracted no papers
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] ICSE: 4 candidate(s)
+[venue] ACM SIGSOFT FSE: no papers on site — trying official host ACM Digital Library (https://dl.acm.org)
+[venue] ACM SIGSOFT FSE: fetched 2 page(s) but extracted no papers
+[venue] 2 candidate refs from 3 venue(s)
+[web] resolved 2 of 2 candidates
+[combined] crossref → 16 records
+[combined] arxiv → 16 records
+[combined] venue → 2 records
+[combined] merged → 34 after dedupe
+      fetched 74 unique records
+[2b]  Processing (schema enforcement)...
+      kept 74 valid records
+[2c]  Enriching metadata (abstracts, OA links, citations)...
+[enrich] abstracts: 43/74 present (+8 via OpenAlex); OA links +0 via Unpaywall fallback
+[2d]  Tagged 1 case study / experience-report paper(s)
+      semantic anchor: "Cognitive/Educational: Human mental models and learning of algorithmic processes. Algorithm comprehension cognitive models. Algorithm comprehension, Mental models of algorithms, Program comprehension, Code comprehension, Proof comprehension, Computer science education"
+[3a]  Scoring semantic similarity (SBERT embeddings)...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 6915.53it/s]
+[semantic] SBERT all-MiniLM-L6-v2 on cuda
+[3/4] Ranking by relevance (semantic + lexical, citation-aware)...
+      refined  : "What does it mean to understand in algorithm? How does algorithm comprehension differ from other comprehension fields like code/program comprehension and proof comprehension"
+      keywords : []
+      intent   : None
+[2/4] Retrieving from crossref,arxiv,venue (limit=50, workers=2)...
+      search   : "What does it mean to understand in algorithm? How does algorithm comprehension differ from other comprehension fields like code/program comprehension and proof comprehension"  (broad / recall)
+[combined] running crossref, arxiv, venue concurrently...
+[crossref] retrieved 16 records
+[arxiv] retrieved 16 entries
+[venue] Program Comprehension (PC) Workshop: no papers on site — trying official host CEUR-Workshop.org (https://ceur-ws.org)
+[venue] Program Comprehension (PC) Workshop: no papers on site — trying official host ACM Digital Library (https://dl.acm.org)
+[venue] Program Comprehension (PC) Workshop: fetched 3 page(s) but extracted no papers
+[venue] ICSE: no papers on site — trying official host IEEE Xplore (https://ieeexplore.ieee.org)
+[venue] ICSE: fetched 2 page(s) but extracted no papers
+[venue] ACM SIGSOFT FSE: no papers on site — trying official host ACM Digital Library (https://dl.acm.org)
+[venue] ACM SIGSOFT FSE: fetched 2 page(s) but extracted no papers
+[venue] 0 candidate refs from 3 venue(s)
+[web] resolved 0 of 0 candidates
+[combined] crossref → 16 records
+[combined] arxiv → 16 records
+[combined] venue → 0 records
+[combined] merged → 32 after dedupe
+      fetched 32 unique records
+[2b]  Processing (schema enforcement)...
+      kept 32 valid records
+[2c]  Enriching metadata (abstracts, OA links, citations)...
+[enrich] abstracts: 17/32 present (+1 via OpenAlex); OA links +0 via Unpaywall fallback
+[3a]  Scoring semantic similarity (SBERT embeddings)...
+[3/4] Ranking by relevance (semantic + lexical, citation-aware)...
+P01: 10 on / 10 off; venues: Program Comprehension (PC) Workshop, ICSE, ACM SIGSOFT FSE

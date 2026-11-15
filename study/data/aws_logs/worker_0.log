@@ -1,0 +1,41 @@
+[venue] suggest failed: timed out waiting for llama-server to start -  (status code: 500)
+[1/4] Understanding query...
+Traceback (most recent call last):
+  File "/home/ubuntu/study/run_tool.py", line 99, in <module>
+    main()
+    ~~~~^^
+  File "/home/ubuntu/study/run_tool.py", line 91, in main
+    **run_question(pipeline_mod, models_mod, pipe, row["question"])}
+      ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/study/run_tool.py", line 33, in run_question
+    structured_on, _, ranked_on = pipe.run_retrieval(question, limit=50, pdf_limit=0)
+                                  ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/tool_w0/pipeline.py", line 69, in run_retrieval
+    structured = self._qu.transform(query)
+  File "/home/ubuntu/tool_w0/query_understanding.py", line 100, in transform
+    response = self._client.chat(
+        model=self._model,
+    ...<4 lines>...
+        options={"temperature": _TEMPERATURE},
+    )
+  File "/home/ubuntu/tool_w0/llm.py", line 118, in chat
+    return super().chat(*args, options={"num_ctx": self._num_ctx, **(options or {})},
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        **kwargs)
+                        ^^^^^^^^^
+  File "/home/ubuntu/tool/venv/lib/python3.14/site-packages/ollama/_client.py", line 391, in chat
+    return self._request(
+           ~~~~~~~~~~~~~^
+      ChatResponse,
+      ^^^^^^^^^^^^^
+    ...<14 lines>...
+      stream=stream,
+      ^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ubuntu/tool/venv/lib/python3.14/site-packages/ollama/_client.py", line 203, in _request
+    return cls(**self._request_raw(*args, **kwargs).json())
+                 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/tool/venv/lib/python3.14/site-packages/ollama/_client.py", line 147, in _request_raw
+    raise ResponseError(e.response.text, e.response.status_code) from None
+ollama._types.ResponseError: timed out waiting for llama-server to start -  (status code: 500)

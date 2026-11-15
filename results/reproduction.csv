@@ -1,0 +1,13 @@
+retriever,measure,ours,paper,diff
+bm25,inline broad R@20,42.3,37.4,4.9
+bm25,inline specific R@5,43.3,38.5,4.8
+bm25,author broad R@20,62.9,48.6,14.3
+bm25,author specific R@5,63.0,62.6,0.4
+bm25,avg broad R@20,46.9,39.9,7.0
+bm25,avg specific R@5,52.7,50.0,2.7
+dense,inline broad R@20,56.4,55.8,0.6
+dense,inline specific R@5,51.9,50.4,1.5
+dense,author broad R@20,54.3,54.3,-0.0
+dense,author specific R@5,61.1,62.6,-1.5
+dense,avg broad R@20,56.0,55.4,0.6
+dense,avg specific R@5,56.3,56.2,0.1

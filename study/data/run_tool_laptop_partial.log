@@ -1,0 +1,7 @@
+[venue] verifying venue links via web search...
+[venue] grounded ITiCSE: https://iticse.org/ → https://iticse.acm.org/
+[venue] grounded LAK: https://www.learning-analytics-knowledge.org/ → https://www.thelakeconference.com/
+[venue] grounded Journal of Educational Psychology: https://www.apa.org/pubs/journals/edu → https://www.apa.org/pubs/journals/edu/
+[venue] auto-picked ITiCSE, SIGCSE, CogSci
+[venue] targeting 3 venue(s): ITiCSE, SIGCSE, CogSci
+[1/4] Understanding query...

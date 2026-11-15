@@ -1,0 +1,177 @@
+{
+  "pid": "P01",
+  "source": "crossref,arxiv",
+  "venues": [
+    "Program Comprehension (PC) Workshop",
+    "ICSE",
+    "ACM SIGSOFT FSE"
+  ],
+  "model": "qwen3.6-moe:latest",
+  "question": "What does it mean to understand in algorithm? How does algorithm comprehension differ from other comprehension fields like code/program comprehension and proof comprehension",
+  "rewrite": "Algorithm comprehension cognitive models | Algorithm comprehension vs program proof comprehension",
+  "on": [
+    {
+      "id": "10.1109/icpc52881.2021.00053",
+      "title": "Is Algorithm Comprehension Different from Program Comprehension?",
+      "abstract": "At the beginning of their undergraduate studies, computer science students are exposed to introductory programming, discrete mathematics, and algorithms. A large body of literature has studied how such students comprehend programs. Much less attention has been paid to understanding how students comprehend algorithms, i.e., representations of problem-solving processes accompanied by proofs of their properties. To investigate whether algorithm comprehension is under-researched or whether we can simply transfer results from program comprehension (and, possibly, proof comprehension) to the domain of algorithms, we conducted a larger study following a Grounded-Theory approach. For this study, we worked with twelve participants with varying degrees of prior knowledge regarding algorithms, from technically no prior knowledge to advanced graduate students pursuing a doctoral degree in algorithms-related fields. In this paper, we report on the analysis and interpretation of interview data focused on exploring potential differences between program comprehension and algorithm comprehension. Our analyses and interpretations revealed both similarities and differences between program comprehension and algorithm comprehension: Unsurprisingly, we found that aspects known from program comprehension, e.g., using top-down approaches or utilizing prior knowledge of programming plans, can be found in algorithm comprehension as well. However, some of these aspects manifest themselves in notably different details or are influenced by, e.g., the wording of a proof. Most interesting, we found that novice and advanced students alike benefit from switching between reading the representation of the program-solving process and the accompanying proofs. We present qualitative results illustrating both similarities and differences between program comprehension and algorithm comprehensions and offer first explanations for these.",
+      "year": "2021",
+      "venue": "2021 IEEE/ACM 29th International Conference on Program Comprehension (ICPC)",
+      "doi": "10.1109/icpc52881.2021.00053"
+    },
+    {
+      "id": "10.1145/3756681.3756968",
+      "title": "Providing Information About Implemented Algorithms Improves Program Comprehension: A Controlled Experiment",
+      "abstract": "Context: Various approaches aim to support program comprehension by automatically detecting algorithms in source code. However, no empirical evaluations of their helpfulness have been performed. Objective: To empirically evaluate how algorithm labels — which include the algorithm’s name and additional information — impact program comprehension in terms of correctness and time. Method: We conducted a controlled experiment with 56 participants, where the experimental group received code with labeled algorithms. The groups completed exercises designed to measure program comprehension as well as a post-questionnaire on label helpfulness, use cases for algorithm recognition, and reasons for self-implementation of algorithms in practice. Results: Annotating source code with algorithm labels significantly improves program comprehension (p=0.040), with a median improvement of 6 points (~23%), but does not affect completion times (p=0.991). Qualitative analysis revealed that a majority of participants perceived the labels as helpful, especially for recognizing the codes intent. Participants also proposed use cases such as error detection, optimization, and library replacement. Reasons for self-implementing algorithms included library inadequacies, performance needs and avoiding dependencies or licensing costs. Conclusion: This study shows that algorithm labels improve program comprehension, especially for developers with medium programming experience. Our qualitative analysis also sheds light on how participants benefit from the labels, further use cases for algorithm recognition and motivations behind self-implementing algorithms.",
+      "year": "2025",
+      "venue": "Proceedings of the 29th International Conference on Evaluation and Assessment in Software Engineering",
+      "doi": "10.1145/3756681.3756968"
+    },
+    {
+      "id": "10.1007/978-981-15-5859-7_25",
+      "title": "Program Execution Comprehension Modelling for Algorithmic Languages Learning Using Ontology-Based Techniques",
+      "abstract": "",
+      "year": "2020",
+      "venue": "Advances in Intelligent Systems and Computing",
+      "doi": "10.1007/978-981-15-5859-7_25"
+    },
+    {
+      "id": "2504.19225v1",
+      "title": "Providing Information About Implemented Algorithms Improves Program Comprehension: A Controlled Experiment",
+      "abstract": "Context: Various approaches aim to support program comprehension by automatically detecting algorithms in source code. However, no empirical evaluations of their helpfulness have been performed. Objective: To empirically evaluate how algorithm labels - which include the algorithm's name and additional information - impact program comprehension in terms of correctness and time. Method: We conducted a controlled experiment with 56 participants, where the experimental group received code with labeled algorithms. The groups completed exercises designed to measure program comprehension as well as a post-questionnaire on label helpfulness, use cases for algorithm recognition, and reasons for self-implementation of algorithms in practice. Results: Annotating source code with algorithm labels significantly improves program comprehension (p=0.040), with a median improvement of 6 points (~23%), but does not affect completion times (p=0.991). Qualitative analysis revealed that a majority of participants perceived the labels as helpful, especially for recognizing the codes intent. Participants also proposed use cases such as error detection, optimization, and library replacement. Reasons for self-implementing algorithms included library inadequacies, performance needs and avoiding dependencies or licensing costs. Conclusion: This study shows that algorithm labels improve program comprehension, especially for developers with medium programming experience. Our qualitative analysis also sheds light on how participants benefit from the labels, further use cases for algorithm recognition and motivations behind self-implementing algorithms.",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": ""
+    },
+    {
+      "id": "10.1109/sera.2005.2",
+      "title": "A cognitive model for program comprehension",
+      "abstract": "This paper proposes a cognitive model to classify the level of cognition and cognitive activities in program comprehension. This model is composed of input, cognitive process and output, among which the cognitive process includes four activities (absorption, denial, reorganization and expulsion) at six Bloom learning levels. Compared with the existing models, our learning model is more complete and more detailed. It not only describes cognitive activities in detail, but can also be applied in most of the cases. Our model can also reveal the differences between experts and novices in program comprehension. It provides some useful insights on how to build a tool to aid program comprehension. We also find that the so-called traditional program comprehension process involves activities not only at comprehension level of the Bloom's taxonomy, but at higher levels as well. A case study is conducted to validate this learning model.",
+      "year": "2005",
+      "venue": "Third ACIS Int'l Conference on Software Engineering Research, Management and Applications (SERA'05)",
+      "doi": "10.1109/sera.2005.2"
+    },
+    {
+      "id": "10.1109/ICPC52881.2021.00054",
+      "title": "Let's Ask Students About Their Programs, Automatically",
+      "abstract": "Students sometimes produce code that works but that its author does not comprehend. For example, a student may apply a poorly-understood code template, stumble upon a working solution through trial and error, or plagiarize. Similarly, passing an automated functional assessment does not guarantee that the student understands their code. One way to tackle these issues is to probe students' comprehension by asking them questions about their own programs. We propose an approach to automatically generate questions about student-written program code. We moreover propose a use case for such questions in the context of automatic assessment systems: after a student's program passes unit tests, the system poses questions to the student about the code. We suggest that these questions can enhance assessment systems, deepen student learning by acting as self-explanation prompts, and provide a window into students' program comprehension. This discussion paper sets an agenda for future technical development and empirical research on the topic.",
+      "year": "2021",
+      "venue": "IEEE/ACM 29th International Conference on Program Comprehension (2021) 467-475",
+      "doi": "10.1109/ICPC52881.2021.00054"
+    },
+    {
+      "id": "10.1145/3183440.3183442",
+      "title": "A neuro-cognitive perspective of program comprehension",
+      "abstract": "Program comprehension is the cognitive process of understanding code. Researchers have proposed several models to describe program comprehension. However, because program comprehension is an internal process and difficult to measure, the accuracy of the existing models are limited. Neuro-imaging methods, such as functional magnetic resonance imaging (fMRI), provide a novel neuro-cognitive perspective to program-comprehension research. With my thesis work, we aim at establishing fMRI as a new tool for program-comprehension and software-engineering studies. Furthermore, we seek to refine our existing framework for conducting fMRI studies by extending it with eye tracking and improved control conditions. We describe how we will apply our upgraded framework to extend our understanding of program comprehension. In the long-run, we would like to contribute insights from our fMRI studies into software-engineering practices by providing code-styling guidelines and programming tools, which reduce the required cognitive effort to comprehend code.",
+      "year": "2018",
+      "venue": "Proceedings of the 40th International Conference on Software Engineering: Companion Proceeedings",
+      "doi": "10.1145/3183440.3183442"
+    },
+    {
+      "id": "0702002v1",
+      "title": "The Effect of Object-Oriented Programming Expertise in Several Dimensions of Comprehension Strategies",
+      "abstract": "This study analyzes object-oriented (OO) program comprehension by experts and novices. We examine the effect of expertise in three dimensions of comprehension strategies: the scope of the comprehension, the top-down versus bottom-up direction of the processes, and the guidance of the comprehension activity. Overall, subjects were similar in the scope of their comprehension, although the experts tended to consult more files. We found strong evidence of top-down, inference-driven behaviors, as well as multiple guidance in expert comprehension. We also found evidence of execution-based guidance and less use of top-down processes in novice comprehension. Guidance by inheritance and composition relationships in the OO program was not dominant, but nevertheless played a substantial role in expert program comprehension. However, these static relationships more closely tied to the OO nature of the program were exploited poorly by novices. To conclude, these results are discussed with respect to the literature on procedural program comprehension.",
+      "year": "2007",
+      "venue": "Dans IWPC'98, Sixth International Workshop on Program Comprehension (1998)",
+      "doi": ""
+    },
+    {
+      "id": "10.1007/978-3-030-25719-4_4",
+      "title": "Ontology-Based Modelling for Learning on Bloom’s Taxonomy Comprehension Level",
+      "abstract": "",
+      "year": "2019",
+      "venue": "Advances in Intelligent Systems and Computing",
+      "doi": "10.1007/978-3-030-25719-4_4"
+    },
+    {
+      "id": "10.1145/3196321.3196322",
+      "title": "Overcoming Language Dichotomies: Toward Effective Program Comprehension for Mobile App Development",
+      "abstract": "Mobile devices and platforms have become an established target for modern software developers due to performant hardware and a large and growing user base numbering in the billions. Despite their popularity, the software development process for mobile apps comes with a set of unique, domain-specific challenges rooted in program comprehension. Many of these challenges stem from developer difficulties in reasoning about different representations of a program, a phenomenon we define as a \"language dichotomy\". In this paper, we reflect upon the various language dichotomies that contribute to open problems in program comprehension and development for mobile apps. Furthermore, to help guide the research community towards effective solutions for these problems, we provide a roadmap of directions for future work.",
+      "year": "2018",
+      "venue": "arXiv",
+      "doi": "10.1145/3196321.3196322"
+    }
+  ],
+  "off": [
+    {
+      "id": "10.1016/s0169-8141(01)00043-9",
+      "title": "Comprehension and workload differences for VDT and paper-based reading",
+      "abstract": "",
+      "year": "2001",
+      "venue": "International Journal of Industrial Ergonomics",
+      "doi": "10.1016/s0169-8141(01)00043-9"
+    },
+    {
+      "id": "10.1016/0378-2166(95)00071-2",
+      "title": "Language comprehension as structure building",
+      "abstract": "",
+      "year": "1996",
+      "venue": "Journal of Pragmatics",
+      "doi": "10.1016/0378-2166(95)00071-2"
+    },
+    {
+      "id": "2504.19225v1",
+      "title": "Providing Information About Implemented Algorithms Improves Program Comprehension: A Controlled Experiment",
+      "abstract": "Context: Various approaches aim to support program comprehension by automatically detecting algorithms in source code. However, no empirical evaluations of their helpfulness have been performed. Objective: To empirically evaluate how algorithm labels - which include the algorithm's name and additional information - impact program comprehension in terms of correctness and time. Method: We conducted a controlled experiment with 56 participants, where the experimental group received code with labeled algorithms. The groups completed exercises designed to measure program comprehension as well as a post-questionnaire on label helpfulness, use cases for algorithm recognition, and reasons for self-implementation of algorithms in practice. Results: Annotating source code with algorithm labels significantly improves program comprehension (p=0.040), with a median improvement of 6 points (~23%), but does not affect completion times (p=0.991). Qualitative analysis revealed that a majority of participants perceived the labels as helpful, especially for recognizing the codes intent. Participants also proposed use cases such as error detection, optimization, and library replacement. Reasons for self-implementing algorithms included library inadequacies, performance needs and avoiding dependencies or licensing costs. Conclusion: This study shows that algorithm labels improve program comprehension, especially for developers with medium programming experience. Our qualitative analysis also sheds light on how participants benefit from the labels, further use cases for algorithm recognition and motivations behind self-implementing algorithms.",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": ""
+    },
+    {
+      "id": "10.1145/3196321.3196322",
+      "title": "Overcoming Language Dichotomies: Toward Effective Program Comprehension for Mobile App Development",
+      "abstract": "Mobile devices and platforms have become an established target for modern software developers due to performant hardware and a large and growing user base numbering in the billions. Despite their popularity, the software development process for mobile apps comes with a set of unique, domain-specific challenges rooted in program comprehension. Many of these challenges stem from developer difficulties in reasoning about different representations of a program, a phenomenon we define as a \"language dichotomy\". In this paper, we reflect upon the various language dichotomies that contribute to open problems in program comprehension and development for mobile apps. Furthermore, to help guide the research community towards effective solutions for these problems, we provide a roadmap of directions for future work.",
+      "year": "2018",
+      "venue": "arXiv",
+      "doi": "10.1145/3196321.3196322"
+    },
+    {
+      "id": "10.1016/s0736-4679(96)00261-2",
+      "title": "Patient comprehension of doctor-patient communication on discharge from the emergency department",
+      "abstract": "",
+      "year": "1997",
+      "venue": "The Journal of Emergency Medicine",
+      "doi": "10.1016/s0736-4679(96)00261-2"
+    },
+    {
+      "id": "10.1016/s1072-7515(01)00815-8",
+      "title": "Effectiveness of Laparoscopic Cadaveric Dissection in Enhancing Resident Comprehension of Pelvic Anatomy",
+      "abstract": "BACKGROUND: Anatomic instruction during preclinical years of medical school has been in decline recently. There is evidence that residents already lose a considerable portion of basic anatomic knowledge in the transition from student to clinician, and this deficit is even more dramatic in residents who start their training with a decreased understanding of anatomy. We questioned whether anatomy could be adequately retaught to new residents as surgical anatomy. In an effort to address this deficiency, we developed a program to teach pelvic anatomy in fresh cadavers using a laparoscopic approach. The purpose of this investigation is to determine if such a program is effective in enhancing residents' pelvic anatomy comprehension. STUDY DESIGN: An obstetrics and gynecology residency was divided into intervention (n = 15) and control (n = 13) groups. The intervention was a 4-hour laparoscopic dissection in a fresh cadaver. Outcomes measures included a multiple-choice test, practical exam, faculty evaluation, and satisfaction assessment. The faculty evaluation and satisfaction assessment used a visual analog scale. Univarate and nonparametric analysis were used when appropriate. RESULTS: Initial test scores (p = 0.32), faculty evaluations (p = 0.25), and satisfaction scores (p = 0.17) were similar. Both groups improved their anatomic knowledge based on test scores (p = 0.004) and faculty evaluations (p < 0.001), and final test scores were not significantly different (p = 0.19). Data measured on a 10-cm visual analog scale suggested higher faculty evaluations in the intervention group (14mm versus 10.3mm, (p = 0.23). Similarly there were higher scores on the cadaver test in the intervention group (65% versus 50%), (p = 0.13). The intervention group was significantly more satisfied with their anatomic training (16.1 mm versus-10.1 mm, p = 0.001). CONCLUSIONS: This study did not have sufficient power to demonstrate that a single laparoscopic cadaveric dissection improves cognitive measures of anatomic perception, but suggested that it improves spatial perception of anatomy and is perceived by residents to be a valuable educational approach.",
+      "year": "2001",
+      "venue": "Journal of the American College of Surgeons",
+      "doi": "10.1016/s1072-7515(01)00815-8"
+    },
+    {
+      "id": "0702002v1",
+      "title": "The Effect of Object-Oriented Programming Expertise in Several Dimensions of Comprehension Strategies",
+      "abstract": "This study analyzes object-oriented (OO) program comprehension by experts and novices. We examine the effect of expertise in three dimensions of comprehension strategies: the scope of the comprehension, the top-down versus bottom-up direction of the processes, and the guidance of the comprehension activity. Overall, subjects were similar in the scope of their comprehension, although the experts tended to consult more files. We found strong evidence of top-down, inference-driven behaviors, as well as multiple guidance in expert comprehension. We also found evidence of execution-based guidance and less use of top-down processes in novice comprehension. Guidance by inheritance and composition relationships in the OO program was not dominant, but nevertheless played a substantial role in expert program comprehension. However, these static relationships more closely tied to the OO nature of the program were exploited poorly by novices. To conclude, these results are discussed with respect to the literature on procedural program comprehension.",
+      "year": "2007",
+      "venue": "Dans IWPC'98, Sixth International Workshop on Program Comprehension (1998)",
+      "doi": ""
+    },
+    {
+      "id": "10.1145/3524610.3527904",
+      "title": "Anchoring Code Understandability Evaluations Through Task Descriptions",
+      "abstract": "In code comprehension experiments, participants are usually told at the beginning what kind of code comprehension task to expect. Describing experiment scenarios and experimental tasks will influence participants in ways that are sometimes hard to predict and control. In particular, describing or even mentioning the difficulty of a code comprehension task might anchor participants and their perception of the task itself. In this study, we investigated in a randomized, controlled experiment with 256 participants (50 software professionals and 206 computer science students) whether a hint about the difficulty of the code to be understood in a task description anchors participants in their own code comprehensibility ratings. Subjective code evaluations are a commonly used measure for how well a developer in a code comprehension study understood code. Accordingly, it is important to understand how robust these measures are to cognitive biases such as the anchoring effect. Our results show that participants are significantly influenced by the initial scenario description in their assessment of code comprehensibility. An initial hint of hard to understand code leads participants to assess the code as harder to understand than participants who received no hint or a hint of easy to understand code. This affects students and professionals alike. We discuss examples of design decisions and contextual factors in the conduct of code comprehension experiments that can induce an anchoring effect, and recommend the use of more robust comprehension measures in code comprehension studies to enhance the validity of results.",
+      "year": "2022",
+      "venue": "In Proceedings of the 30th IEEE/ACM International Conference on Program Comprehension (ICPC 2022). Association for Computing Machinery, New York, NY, USA, 133-140",
+      "doi": "10.1145/3524610.3527904"
+    },
+    {
+      "id": "2103.08769v1",
+      "title": "Considerations and Pitfalls in Controlled Experiments on Code Comprehension",
+      "abstract": "Understanding program code is a complicated endeavor. As such, myriad different factors can influence the outcome. Investigations of program comprehension, and in particular those using controlled experiments, have to take these factors into account. In order to promote the development and use of sound experimental methodology, we discuss potential problems with regard to the experimental subjects, the code they work on, the tasks they are asked to perform, and the metrics for their performance.",
+      "year": "2021",
+      "venue": "arXiv",
+      "doi": ""
+    },
+    {
+      "id": "2511.02922v3",
+      "title": "Faster but Not Wiser: GitHub Copilot Decouples Programming Performance from Code Comprehension in Brownfield Tasks",
+      "abstract": "Teaching Computer Science (CS) students to comprehend and maintain existing codebases is a critical challenge in software engineering education. Although Generative AI (GenAI) assistants such as GitHub Copilot can improve task completion speed and correctness, their relationship with code comprehension remains unclear. We conducted a within-subjects study with 15 CS graduate students who completed feature-implementation tasks in an unfamiliar codebase with and without Copilot. Despite significant performance improvements with Copilot, participants showed no corresponding improvement in overall comprehension ($p=0.59$), and performance gains were not significantly associated with comprehension gains. Exploratory category-level estimates were positive for identifying what and where to modify ($ρ=0.50$) and negative for explaining how the existing code worked and predicting the effects of a change ($ρ=-0.57$); however, neither remained significant after correction for multiple comparisons. Our behavioral analysis showed that participants with higher comprehension engaged more frequently in verification loops, repeatedly inspecting and revising code. They performed write-then-view transitions 4.7 times more often than participants with lower comprehension ($p=0.001$). These findings show that successful task completion does not reliably indicate code comprehension and suggest that how students engage with AI-generated code may matter for their resulting understanding. We argue for programming education that assesses correctness and comprehension separately, teaches students to inspect and explain AI-generated code, and encourages GenAI tools that support active verification.",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": ""
+    }
+  ],
+  "seconds": 1873
+}

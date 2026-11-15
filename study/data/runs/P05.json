@@ -1,0 +1,177 @@
+{
+  "pid": "P05",
+  "source": "crossref,arxiv",
+  "venues": [
+    "AAMAS (International Conference on Autonomous Agents and Multiagent Systems)",
+    "Autonomous Agents and Multi-Agent Systems (Journal)",
+    "International Conference on Runtime Verification (RV)"
+  ],
+  "model": "qwen3.6-moe:latest",
+  "question": "Can telemetry logs from multi-agent systems be used to detect adversarial behaviour at runtime? How can we build monitoring mechanisms or runtime guards that identify suspicious agent interactions and distinguish genuine system anomalies from deliberate attacks?",
+  "rewrite": "Adversarial detection in multi-agent systems | Runtime monitoring of adversarial behavior in multi-agent systems",
+  "on": [
+    {
+      "id": "10.1108/14777830410531216",
+      "title": "An agent-based intelligent environmental monitoring system",
+      "abstract": "Fairly rapid environmental changes call for continuous surveillance and on-line decision making. There are two main areas where IT technologies can be valuable. In this paper we present a multi-agent system for monitoring and assessing air-quality attributes, which uses data coming from a meteorological station. A community of software agents is assigned to monitor and validate measurements coming from several sensors, to assess air-quality, and, finally, to fire alarms to appropriate recipients, when needed. Data mining techniques have been used for adding data-driven, customized intelligence into agents. The architecture of the developed system, its domain ontology, and typical agent interactions are presented. Finally, the deployment of a real-world test case is demonstrated.",
+      "year": "2004",
+      "venue": "Management of Environmental Quality, 15(3):238-249, May 2004",
+      "doi": "10.1108/14777830410531216"
+    },
+    {
+      "id": "10.1016/j.knosys.2026.116067",
+      "title": "Mapping Human Anti-collusion Mechanisms to Multi-agent AI Systems",
+      "abstract": "As multi-agent AI systems become increasingly autonomous, evidence shows they can develop collusive strategies similar to those long observed in human markets and institutions. While human domains have accumulated centuries of anti-collusion mechanisms, it remains unclear how these can be adapted to AI settings. This paper addresses that gap by (i) developing a taxonomy of human anti-collusion mechanisms, including sanctions, leniency & whistleblowing, monitoring & auditing, market design, and governance and (ii) mapping them to potential interventions for multi-agent AI systems. For each mechanism, we propose implementation approaches. We also highlight open challenges, such as the attribution problem (difficulty attributing emergent coordination to specific agents), identity fluidity (agents being easily forked or modified), the boundary problem (distinguishing beneficial cooperation from harmful collusion), and adversarial adaptation (agents learning to evade detection).",
+      "year": "2026",
+      "venue": "Idowu, J., Almasoud, A. S., & Alfahid, A. (2026). Mapping human anti-collusion mechanisms to multi-agent AI systems. Knowledge-Based Systems, 344(116067), 116067. https://doi.org/10.1016/j.knosys.2026.116067",
+      "doi": "10.1016/j.knosys.2026.116067"
+    },
+    {
+      "id": "10.1007/978-3-642-38859-0_10",
+      "title": "A Methodology to Engineer and Validate Dynamic Multi-level Multi-agent Based Simulations",
+      "abstract": "This article proposes a methodology to model and simulate complex systems, based on IRM4MLS, a generic agent-based meta-model able to deal with multi-level systems. This methodology permits the engineering of dynamic multi-level agent-based models, to represent complex systems over several scales and domains of interest. Its goal is to simulate a phenomenon using dynamically the lightest representation to save computer resources without loss of information. This methodology is based on two mechanisms: (1) the activation or deactivation of agents representing different domain parts of the same phenomenon and (2) the aggregation or disaggregation of agents representing the same phenomenon at different scales.",
+      "year": "2013",
+      "venue": "Multi-Agent-Based Simulation XIII LNCS 7838 p 130-142, 2013",
+      "doi": "10.1007/978-3-642-38859-0_10"
+    },
+    {
+      "id": "10.1007/978-3-031-20179-0_9",
+      "title": "Only Those Who Can Obey Can Disobey: The Intentional Implications of Artificial Agent Disobedience",
+      "abstract": "",
+      "year": "2022",
+      "venue": "Lecture Notes in Computer Science",
+      "doi": "10.1007/978-3-031-20179-0_9"
+    },
+    {
+      "id": "2506.03053v2",
+      "title": "MAEBE: Multi-Agent Emergent Behavior Framework",
+      "abstract": "Traditional AI safety evaluations on isolated LLMs are insufficient as multi-agent AI ensembles become prevalent, introducing novel emergent risks. This paper introduces the Multi-Agent Emergent Behavior Evaluation (MAEBE) framework to systematically assess such risks. Using MAEBE with the Greatest Good Benchmark (and a novel double-inversion question technique), we demonstrate that: (1) LLM moral preferences, particularly for Instrumental Harm, are surprisingly brittle and shift significantly with question framing, both in single agents and ensembles. (2) The moral reasoning of LLM ensembles is not directly predictable from isolated agent behavior due to emergent group dynamics. (3) Specifically, ensembles exhibit phenomena like peer pressure influencing convergence, even when guided by a supervisor, highlighting distinct safety and alignment challenges. Our findings underscore the necessity of evaluating AI systems in their interactive, multi-agent contexts.",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": ""
+    },
+    {
+      "id": "2302.10809v4",
+      "title": "Causal Explanations for Sequential Decision-Making in Multi-Agent Systems",
+      "abstract": "We present CEMA: Causal Explanations in Multi-Agent systems; a framework for creating causal natural language explanations of an agent's decisions in dynamic sequential multi-agent systems to build more trustworthy autonomous agents. Unlike prior work that assumes a fixed causal structure, CEMA only requires a probabilistic model for forward-simulating the state of the system. Using such a model, CEMA simulates counterfactual worlds that identify the salient causes behind the agent's decisions. We evaluate CEMA on the task of motion planning for autonomous driving and test it in diverse simulated scenarios. We show that CEMA correctly and robustly identifies the causes behind the agent's decisions, even when a large number of other agents is present, and show via a user study that CEMA's explanations have a positive effect on participants' trust in autonomous vehicles and are rated as high as high-quality baseline explanations elicited from other participants. We release the collected explanations with annotations as the HEADD dataset.",
+      "year": "2023",
+      "venue": "arXiv",
+      "doi": ""
+    },
+    {
+      "id": "1301.6431v2",
+      "title": "Automatic Verification of Parameterised Interleaved Multi-Agent Systems",
+      "abstract": "A key problem in verification of multi-agent systems by model checking concerns the fact that the state-space of the system grows exponentially with the number of agents present. This makes practical model checking unfeasible whenever the system contains more than a few agents. In this paper we put forward a technique to establish a cutoff result, thereby showing that all systems of arbitrary number of agents can be verified by model checking a single system containing a number of agents equal to the cutoff of the system. While this problem is undecidable in general, we here define a class of parameterised interpreted systems and a parameterised temporal-epistemic logic for which the result can be shown. We exemplify the theoretical results on a robotic example and present an implementation of the technique on top of mcmas, an open-source model checker for multi-agent systems.",
+      "year": "2013",
+      "venue": "arXiv",
+      "doi": ""
+    },
+    {
+      "id": "10.5772/1936",
+      "title": "Multi-Agent Systems and Blood Cell Formation",
+      "abstract": "The objective of this chapter is to give an insight of the mathematical modellng of hematopoiesis using multi-agent systems. Several questions may arise then: what is hematopoiesis and why is it interesting to study this problem from a mathematical point of view? Has the multi-agent system approach been the only attempt done until now? What does it bring more than other techniques? What were the results obtained? What is there left to do?",
+      "year": "2013",
+      "venue": "Multi-Agent Systems - Modeling, Interactions, Simulations and Case Studies, InTech (Ed.) (2011) 502",
+      "doi": "10.5772/1936"
+    },
+    {
+      "id": "10.1007/s10458-026-09765-5",
+      "title": "Whom to trust? selective online learning in multi-agent systems with prior-aware gaussian process regression",
+      "abstract": "",
+      "year": "2026",
+      "venue": "Autonomous Agents and Multi-Agent Systems",
+      "doi": "10.1007/s10458-026-09765-5"
+    },
+    {
+      "id": "10.1067/mhj.2001.113152",
+      "title": "Statistical approaches and policies for the operations of Data and Safety Monitoring Committees",
+      "abstract": "",
+      "year": "2001",
+      "venue": "American Heart Journal",
+      "doi": "10.1067/mhj.2001.113152"
+    }
+  ],
+  "off": [
+    {
+      "id": "10.1108/14777830410531216",
+      "title": "An agent-based intelligent environmental monitoring system",
+      "abstract": "Fairly rapid environmental changes call for continuous surveillance and on-line decision making. There are two main areas where IT technologies can be valuable. In this paper we present a multi-agent system for monitoring and assessing air-quality attributes, which uses data coming from a meteorological station. A community of software agents is assigned to monitor and validate measurements coming from several sensors, to assess air-quality, and, finally, to fire alarms to appropriate recipients, when needed. Data mining techniques have been used for adding data-driven, customized intelligence into agents. The architecture of the developed system, its domain ontology, and typical agent interactions are presented. Finally, the deployment of a real-world test case is demonstrated.",
+      "year": "2004",
+      "venue": "Management of Environmental Quality, 15(3):238-249, May 2004",
+      "doi": "10.1108/14777830410531216"
+    },
+    {
+      "id": "10.24963/ijcai.2024/890",
+      "title": "Large Language Model Based Multi-agents: A Survey of Progress and Challenges",
+      "abstract": "Large Language Models (LLMs) have achieved remarkable success across a wide array of tasks. Due to their notable capabilities in planning and reasoning, LLMs have been utilized as autonomous agents for the automatic execution of various tasks. Recently, LLM-based agent systems have rapidly evolved from single-agent planning or decision-making to operating as multi-agent systems, enhancing their ability in complex problem-solving and world simulation. To offer an overview of this dynamic field,  we present this survey to offer an in-depth discussion on the essential aspects and challenges of LLM-based multi-agent (LLM-MA) systems. Our objective is to provide readers with an in-depth understanding of these key points: the domains and settings where LLM-MA systems operate or simulate; the profiling and communication methods of these agents; and the means by which these agents develop their skills. For those interested in delving into this field, we also summarize the commonly used datasets or benchmarks. To keep researchers updated on the latest studies,  we maintain an open-source GitHub repository (github.com/taichengguo/LLM_MultiAgents_Survey_Papers), dedicated to outlining the research of LLM-MA research.",
+      "year": "2024",
+      "venue": "Proceedings of the Thirty-ThirdInternational Joint Conference on Artificial Intelligence",
+      "doi": "10.24963/ijcai.2024/890"
+    },
+    {
+      "id": "10.1016/j.knosys.2026.116067",
+      "title": "Mapping Human Anti-collusion Mechanisms to Multi-agent AI Systems",
+      "abstract": "As multi-agent AI systems become increasingly autonomous, evidence shows they can develop collusive strategies similar to those long observed in human markets and institutions. While human domains have accumulated centuries of anti-collusion mechanisms, it remains unclear how these can be adapted to AI settings. This paper addresses that gap by (i) developing a taxonomy of human anti-collusion mechanisms, including sanctions, leniency & whistleblowing, monitoring & auditing, market design, and governance and (ii) mapping them to potential interventions for multi-agent AI systems. For each mechanism, we propose implementation approaches. We also highlight open challenges, such as the attribution problem (difficulty attributing emergent coordination to specific agents), identity fluidity (agents being easily forked or modified), the boundary problem (distinguishing beneficial cooperation from harmful collusion), and adversarial adaptation (agents learning to evade detection).",
+      "year": "2026",
+      "venue": "Idowu, J., Almasoud, A. S., & Alfahid, A. (2026). Mapping human anti-collusion mechanisms to multi-agent AI systems. Knowledge-Based Systems, 344(116067), 116067. https://doi.org/10.1016/j.knosys.2026.116067",
+      "doi": "10.1016/j.knosys.2026.116067"
+    },
+    {
+      "id": "2506.04572v1",
+      "title": "Demonstrations of Integrity Attacks in Multi-Agent Systems",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities in natural language understanding, code generation, and complex planning. Simultaneously, Multi-Agent Systems (MAS) have garnered attention for their potential to enable cooperation among distributed agents. However, from a multi-party perspective, MAS could be vulnerable to malicious agents that exploit the system to serve self-interests without disrupting its core functionality. This work explores integrity attacks where malicious agents employ subtle prompt manipulation to bias MAS operations and gain various benefits. Four types of attacks are examined: \\textit{Scapegoater}, who misleads the system monitor to underestimate other agents' contributions; \\textit{Boaster}, who misleads the system monitor to overestimate their own performance; \\textit{Self-Dealer}, who manipulates other agents to adopt certain tools; and \\textit{Free-Rider}, who hands off its own task to others. We demonstrate that strategically crafted prompts can introduce systematic biases in MAS behavior and executable instructions, enabling malicious agents to effectively mislead evaluation systems and manipulate collaborative agents. Furthermore, our attacks can bypass advanced LLM-based monitors, such as GPT-4o-mini and o3-mini, highlighting the limitations of current detection mechanisms. Our findings underscore the critical need for MAS architectures with robust security protocols and content validation mechanisms, alongside monitoring systems capable of comprehensive risk scenario assessment.",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": ""
+    },
+    {
+      "id": "10.1016/s0950-7051(01)00150-2",
+      "title": "A multi-agent monitoring and diagnostic system for TCP/IP-based network and its coordination",
+      "abstract": "",
+      "year": "2001",
+      "venue": "Knowledge-Based Systems",
+      "doi": "10.1016/s0950-7051(01)00150-2"
+    },
+    {
+      "id": "10.1007/978-3-642-38859-0_10",
+      "title": "A Methodology to Engineer and Validate Dynamic Multi-level Multi-agent Based Simulations",
+      "abstract": "This article proposes a methodology to model and simulate complex systems, based on IRM4MLS, a generic agent-based meta-model able to deal with multi-level systems. This methodology permits the engineering of dynamic multi-level agent-based models, to represent complex systems over several scales and domains of interest. Its goal is to simulate a phenomenon using dynamically the lightest representation to save computer resources without loss of information. This methodology is based on two mechanisms: (1) the activation or deactivation of agents representing different domain parts of the same phenomenon and (2) the aggregation or disaggregation of agents representing the same phenomenon at different scales.",
+      "year": "2013",
+      "venue": "Multi-Agent-Based Simulation XIII LNCS 7838 p 130-142, 2013",
+      "doi": "10.1007/978-3-642-38859-0_10"
+    },
+    {
+      "id": "10.18653/v1/2024.emnlp-main.992",
+      "title": "Encouraging Divergent Thinking in Large Language Models through Multi-Agent Debate",
+      "abstract": "Modern large language models (LLMs) like ChatGPT have shown remarkable performance on general language tasks but still struggle on complex reasoning tasks, which drives the research on cognitive behaviors of LLMs to explore human-like problem-solving strategies.Along this direction, one representative strategy is self-reflection, which asks an LLM to refine the solution with the feedback generated by itself iteratively.However, our study shows that such reflection-style methods suffer from the Degeneration-of-Thought (DoT) problem: once the LLM has established confidence in its solutions, it is unable to generate novel thoughts later through reflection even if its initial stance is incorrect.To address the DoT problem, we propose a Multi-Agent Debate (MAD) framework, in which multiple agents express their arguments in the state of \"tit for tat\" and a judge manages the debate process to obtain a final solution.Clearly, our MAD framework encourages divergent thinking in LLMs which would be helpful for tasks that require deep levels of contemplation.Experiment results on two challenging datasets, commonsense machine translation and counterintuitive arithmetic reasoning, demonstrate the effectiveness of our MAD framework.Extensive analyses suggest that the adaptive break of debate and the modest level of \"tit for tat\" state are required for MAD to obtain good performance.Moreover, we find that LLMs might not be a fair judge if different LLMs are used for agents.Code is available at https://github. com/Skytliang/Multi-Agents-Debate.",
+      "year": "2024",
+      "venue": "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+      "doi": "10.18653/v1/2024.emnlp-main.992"
+    },
+    {
+      "id": "2610.00980v1",
+      "title": "Can AI Scientists Coordinate at Runtime?",
+      "abstract": "Multi-agent AI scientists have shown improving performance across a diverse range of tasks. Yet a common approach is design-time agentic orchestration, which typically relies on fixed workflows. In contrast, human scientists coordinate and adjust their division of labor at runtime. We therefore ask: can AI scientists also coordinate at runtime? To this end, we introduce Runtime Agent Coordination (RAC), which selects agents from existing AI-scientist hosts during execution, assigns scoped work contracts, and provides artifact-grounded verification. Verification informs subsequent agents without blocking transitions or discarding artifacts. We conduct a single-seed exploratory evaluation across Agent Laboratory, EvoScientist, and ARK on ResearchClawBench, preserving host models, tools, and permissions under host-calibrated budgets. Four cumulative conditions separate native execution, runtime communication, runtime selection, and the combined addition of contracts and verification. Runtime selection yields the highest observed mean score for each host; adding contracts and verification reduces these means, with host-dependent outcomes relative to native execution. These results motivate runtime coordination while exposing the limits of additional coordination mechanisms under constrained budgets. Code is available at https://github.com/systemind-team/Runtime-AI-Scientist.",
+      "year": "2026",
+      "venue": "arXiv",
+      "doi": ""
+    },
+    {
+      "id": "2605.20173v2",
+      "title": "A Methodology for Selecting and Composing Runtime Architecture Patterns for Production LLM Agents",
+      "abstract": "Production LLM agents combine stochastic model outputs with deterministic software systems, yet the boundary between the two is rarely treated as a first-class architectural object. This paper names that boundary the stochastic-deterministic boundary (SDB): a four-part contract among a proposer, verifier, commit step, and reject signal that specifies how an LLM output becomes a system action. We argue that the SDB is the load-bearing primitive of production agent runtimes. Around this primitive, we organize agent runtime design into three concerns: Coordination, State, and Control. We present a catalog of six runtime patterns that compose the SDB differently across conversational, autonomous, and long-horizon agents: hierarchical delegation, scatter-gather plus saga, event-driven sequencing, shared state machine, supervisor plus gate, and human in the loop. For each pattern, we trace its lineage to distributed-systems concepts and identify what changes when the worker is stochastic. The paper contributes a five-step methodology for selecting runtime patterns, a diagnostic procedure that maps production failures to pattern weaknesses, and a failure mode called replay divergence, in which LLM-based consumers of a deterministic event log produce different downstream outputs under model-version or prompt changes. A stylized reliability decomposition separates per-call model variance from architectural momentum, motivating the claim that as model variance decreases, pattern choice and SDB strength become increasingly important levers for long-run reliability. We apply the methodology to five workloads and provide one runnable reference implementation for a 90-day contract-renewal agent.",
+      "year": "2026",
+      "venue": "arXiv",
+      "doi": ""
+    },
+    {
+      "id": "2605.27328v1",
+      "title": "Governed Evolution of Agent Runtimes through Executable Operational Cognition",
+      "abstract": "Recent advances in agentic systems increasingly treat code as an executable operational substrate rather than as a disposable output artifact. Prior work such as \\emph{Code as Agent Harness} frames validated agent-generated artifacts as runtime entities that can be created, executed, revised, persisted, and reused within long-running cognitive loops. However, the governance, lifecycle management, and operational evolution of such artifacts remain under-specified. This paper proposes a framework for governed runtime evolution in multi-agent systems through executable operational cognition. We formalize agent-generated artifacts as persistent runtime capabilities that progressively become part of the operational substrate rather than transient intermediate outputs. Building on this perspective, we introduce \\emph{HarnessMutation} as a governed mechanism for lifecycle-aware runtime adaptation operating under explicit validation, traceability, evaluation, and rollback constraints. Rather than treating runtime adaptation as unrestricted self-modification, the proposed framework models evolution as a bounded and observable process over persistent operational memory. It further shows how these ideas can be operationalized over modern agent runtimes and governance-oriented orchestration systems, providing a conceptual foundation for adaptive infrastructures whose evolution remains explicit, auditable, and constrained.",
+      "year": "2026",
+      "venue": "arXiv",
+      "doi": ""
+    }
+  ],
+  "seconds": 2794
+}

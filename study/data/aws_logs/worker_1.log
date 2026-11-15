@@ -1,0 +1,150 @@
+[venue] suggest failed: timed out waiting for llama-server to start -  (status code: 500)
+[1/4] Understanding query...
+      note: query is ambiguous — auto-picked one sense (run interactively to choose):
+            → Software engineering and web optimization practices for AI search
+              other sense: Computational mechanisms of LLM retrieval and ranking
+              other sense: Sociotechnical impact of AI citation and visibility
+      refined  : "LLM retrieval optimization"
+      keywords : ['LLM retrieval optimization', 'search engine optimization', 'generative AI search', 'web content structuring', 'citation optimization']
+      intent   : implementation
+[2/4] Retrieving from crossref,arxiv (limit=50, workers=2)...
+      search   : "LLM retrieval optimization"  (broad / recall)
+[combined] running crossref, arxiv concurrently...
+[crossref] retrieved 25 records
+[arxiv] retrieved 25 entries
+[combined] crossref → 25 records
+[combined] arxiv → 25 records
+[combined] merged → 50 after dedupe
+      focus    : "LLM retrieval optimization for web content"  (focused / precision)
+[combined] running crossref, arxiv concurrently...
+[arxiv] retrieved 25 entries
+[crossref] retrieved 25 records
+[combined] crossref → 25 records
+[combined] arxiv → 25 records
+[combined] merged → 50 after dedupe
+      fetched 78 unique records
+[2b]  Processing (schema enforcement)...
+      kept 78 valid records
+[2c]  Enriching metadata (abstracts, OA links, citations)...
+[enrich] abstracts: 39/78 present (+0 via OpenAlex); OA links +0 via Unpaywall fallback
+[2d]  Tagged 2 case study / experience-report paper(s)
+      semantic anchor: "Software engineering and web optimization practices for AI search. LLM retrieval optimization. LLM retrieval optimization, search engine optimization, generative AI search, web content structuring, citation optimization"
+[3a]  Scoring semantic similarity (SBERT embeddings)...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 2940.35it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[semantic] SBERT all-MiniLM-L6-v2 on cuda
+[3/4] Ranking by relevance (semantic + lexical, citation-aware)...
+      refined  : "How should we optimise a website so that it gets cited or recommended by generative AI search engines like ChatGPT and Perplexity? Is GEO fundamentally different from traditional SEO, and what changes should be made to website content and structure to improve visibility in AI-generated answers?"
+      keywords : []
+      intent   : None
+[2/4] Retrieving from crossref,arxiv (limit=50, workers=2)...
+      search   : "How should we optimise a website so that it gets cited or recommended by generative AI search engines like ChatGPT and Perplexity? Is GEO fundamentally different from traditional SEO, and what changes should be made to website content and structure to improve visibility in AI-generated answers?"  (broad / recall)
+[combined] running crossref, arxiv concurrently...
+[crossref] retrieved 25 records
+[arxiv] retrieved 25 entries
+[combined] crossref → 25 records
+[combined] arxiv → 25 records
+[combined] merged → 50 after dedupe
+      fetched 50 unique records
+[2b]  Processing (schema enforcement)...
+      kept 50 valid records
+[2c]  Enriching metadata (abstracts, OA links, citations)...
+[enrich] abstracts: 40/50 present (+11 via OpenAlex); OA links +0 via Unpaywall fallback
+[3a]  Scoring semantic similarity (SBERT embeddings)...
+[3/4] Ranking by relevance (semantic + lexical, citation-aware)...
+[venue] verifying venue links via web search...
+[venue] grounded ICAIL: https://www.icail.org/ → https://site.smu.edu.sg/icail-2026
+[venue] grounded LegalNLP: https://legalnlp.github.io/ → https://nllpw.org/
+[venue] grounded EMNLP: https://aclanthology.org/venues/emnlp/ → https://2026.emnlp.org/
+[venue] grounded JURIX: https://jurix.org/ → https://jurix.nl/
+[venue] auto-picked ICAIL, Artificial Intelligence and Law, JURIX
+[venue] targeting 3 venue(s): ICAIL, Artificial Intelligence and Law, JURIX
+[1/4] Understanding query...
+      note: query is ambiguous — auto-picked one sense (run interactively to choose):
+            → Computational NLP and machine learning approaches for automated detection of violations, conflicts, and missing clauses in legal texts.
+              other sense: Formal logic, ontologies, and rule-based systems for representing legal requirements and verifying logical consistency.
+              other sense: Empirical studies evaluating automated compliance tools against human legal professionals for accuracy, reliability, and workflow integration.
+              other sense: Critical studies on algorithmic bias, fairness, and accountability in automated regulatory compliance systems.
+      refined  : "Legal Compliance Checking"
+      keywords : ['Legal NLP', 'Automated Legal Compliance', 'Violation Detection', 'Legal Text Classification']
+      intent   : survey
+[2/4] Retrieving from crossref,arxiv,venue (limit=50, workers=2)...
+      search   : "Legal Compliance Checking"  (broad / recall)
+[combined] running crossref, arxiv, venue concurrently...
+[arxiv] retrieved 16 entries
+[crossref] retrieved 16 records
+[web] DDG rate-limited its HTTP endpoint — routing searches through the browser for the rest of this run
+/home/ubuntu/tool_w1/browser_render.py:59: LeakWarning: Canvas and WebGL readback return random data, as privacy.resistFingerprinting does in LibreWolf, Tor Browser and Mullvad Browser. Stock Firefox does not do this, so the browser reads as a privacy-hardened Firefox. It is on because the identity claims another OS or GPU than this machine's, whose canvas would show the real one. Pass `canvas_noise=False` to keep stock canvas behaviour.
+If this is intentional, pass `i_know_what_im_doing=True`.
+  with Camoufox(headless=_headless()) as browser:
+[venue] ICAIL: 6 candidate(s)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] Artificial Intelligence and Law: no papers on site — trying official host Springer (https://link.springer.com/journal/10506)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] Artificial Intelligence and Law: 43 candidate(s)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] JURIX: 8 candidate(s)
+[venue] 51 candidate refs from 3 venue(s)
+[web] resolved 16 of 51 candidates
+[combined] crossref → 16 records
+[combined] arxiv → 16 records
+[combined] venue → 16 records
+[combined] merged → 48 after dedupe
+      focus    : "Legal Compliance Checking NLP"  (focused / precision)
+[combined] running crossref, arxiv, venue concurrently...
+[arxiv] retrieved 16 entries
+[crossref] retrieved 16 records
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (2 hits) — DDG HTTP endpoint was blocked
+[venue] ICAIL: 16 candidate(s)
+[venue] Artificial Intelligence and Law: no papers on site — trying official host SpringerLink (https://link.springer.com/journal/10506)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] Artificial Intelligence and Law: 39 candidate(s)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] JURIX: 8 candidate(s)
+[venue] 59 candidate refs from 3 venue(s)
+[web] resolved 16 of 59 candidates
+[combined] crossref → 16 records
+[combined] arxiv → 16 records
+[combined] venue → 16 records
+[combined] merged → 48 after dedupe
+      fetched 64 unique records
+[2b]  Processing (schema enforcement)...
+      kept 64 valid records
+[2c]  Enriching metadata (abstracts, OA links, citations)...
+[enrich] abstracts: 38/64 present (+8 via OpenAlex); OA links +0 via Unpaywall fallback
+[2d]  Tagged 1 case study / experience-report paper(s)
+      semantic anchor: "Computational NLP and machine learning approaches for automated detection of violations, conflicts, and missing clauses in legal texts.. Legal Compliance Checking. Legal NLP, Automated Legal Compliance, Violation Detection, Legal Text Classification"
+[3a]  Scoring semantic similarity (SBERT embeddings)...
+[3/4] Ranking by relevance (semantic + lexical, citation-aware)...
+      refined  : "How can we automatically check whether legal documents comply with the requirements specified in regulations or other legal documents? Can NLP techniques identify missing clauses, conflicting requirements and violations, and how reliable are these methods compared with manual legal review?"
+      keywords : []
+      intent   : None
+[2/4] Retrieving from crossref,arxiv,venue (limit=50, workers=2)...
+      search   : "How can we automatically check whether legal documents comply with the requirements specified in regulations or other legal documents? Can NLP techniques identify missing clauses, conflicting requirements and violations, and how reliable are these methods compared with manual legal review?"  (broad / recall)
+[combined] running crossref, arxiv, venue concurrently...
+[crossref] retrieved 16 records
+[arxiv] retrieved 16 entries
+[venue] ICAIL: 8 candidate(s)
+[venue] Artificial Intelligence and Law: no papers on site — trying official host SpringerLink (https://link.springer.com/journal/10506)
+[venue] Artificial Intelligence and Law: 37 candidate(s)
+[venue] JURIX: 8 candidate(s)
+[venue] 50 candidate refs from 3 venue(s)
+[web] resolved 16 of 50 candidates
+[combined] crossref → 16 records
+[combined] arxiv → 16 records
+[combined] venue → 16 records
+[combined] merged → 48 after dedupe
+      fetched 48 unique records
+[2b]  Processing (schema enforcement)...
+      kept 48 valid records
+[2c]  Enriching metadata (abstracts, OA links, citations)...
+[enrich] abstracts: 27/48 present (+5 via OpenAlex); OA links +0 via Unpaywall fallback
+[2d]  Tagged 1 case study / experience-report paper(s)
+[3a]  Scoring semantic similarity (SBERT embeddings)...
+[3/4] Ranking by relevance (semantic + lexical, citation-aware)...
+P03: 10 on / 10 off; venues: none
+P06: 10 on / 10 off; venues: ICAIL, Artificial Intelligence and Law, JURIX

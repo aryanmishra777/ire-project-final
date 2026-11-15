@@ -1,0 +1,289 @@
+[venue] verifying venue links via web search...
+[venue] grounded SIGGRAPH: https://siggraph.org → https://www.siggraph.org/
+[venue] grounded TPAMI: https://www.computer.org/csdl/journal/tp → https://www.computer.org/digital-library/journals/tp/editorials-and-news
+[venue] grounded TVCG: https://www.computer.org/csdl/journal/tg → https://tc.computer.org/vgtc/publications/journal/
+[venue] grounded IJCV: https://www.springer.com/journal/11263 → https://www.ijcv.org/
+[venue] auto-picked CVPR, SIGGRAPH, ICCV
+[venue] targeting 3 venue(s): CVPR, SIGGRAPH, ICCV
+[1/4] Understanding query...
+      note: query is ambiguous — auto-picked one sense (run interactively to choose):
+            → COMPUTATIONAL / formal: Mathematical formulation of time-varying Gaussian primitives and algorithmic comparison
+              other sense: DYNAMIC SCENE RECONSTRUCTION: Capturing and modeling time-varying 3D geometry and temporal consistency
+              other sense: SOFTWARE-ENGINEERING / Systems: Real-time rendering pipelines, GPU optimization, and quality-latency trade-offs
+      refined  : "4D Gaussian Splatting"
+      keywords : ['time-dependent Gaussians', 'temporal Gaussian Splatting', '4D radiance fields', 'Gaussian splatting algorithm']
+      intent   : survey
+[2/4] Retrieving from crossref,arxiv,venue (limit=50, workers=2)...
+      search   : "4D Gaussian Splatting"  (broad / recall)
+[combined] running crossref, arxiv, venue concurrently...
+/home/ubuntu/tool_w0/browser_render.py:59: LeakWarning: Canvas and WebGL readback return random data, as privacy.resistFingerprinting does in LibreWolf, Tor Browser and Mullvad Browser. Stock Firefox does not do this, so the browser reads as a privacy-hardened Firefox. It is on because the identity claims another OS or GPU than this machine's, whose canvas would show the real one. Pass `canvas_noise=False` to keep stock canvas behaviour.
+If this is intentional, pass `i_know_what_im_doing=True`.
+  with Camoufox(headless=_headless()) as browser:
+[web] DDG rate-limited its HTTP endpoint — routing searches through the browser for the rest of this run
+[crossref] retrieved 16 records
+[arxiv] retrieved 16 entries
+[venue] CVPR: 4 candidate(s)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] SIGGRAPH: 9 candidate(s)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] ICCV: 8 candidate(s)
+[venue] 14 candidate refs from 3 venue(s)
+[web] resolved 13 of 14 candidates
+[combined] crossref → 16 records
+[combined] arxiv → 16 records
+[combined] venue → 13 records
+[combined] merged → 45 after dedupe
+      focus    : "4D Gaussian Splatting dynamic scene representation"  (focused / precision)
+[combined] running crossref, arxiv, venue concurrently...
+[crossref] retrieved 16 records
+[arxiv] retrieved 16 entries
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] CVPR: 5 candidate(s)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] SIGGRAPH: 9 candidate(s)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] ICCV: 13 candidate(s)
+[venue] 15 candidate refs from 3 venue(s)
+[web] resolved 14 of 15 candidates
+[combined] crossref → 16 records
+[combined] arxiv → 16 records
+[combined] venue → 14 records
+[combined] merged → 46 after dedupe
+      fetched 71 unique records
+[2b]  Processing (schema enforcement)...
+      kept 71 valid records
+[2c]  Enriching metadata (abstracts, OA links, citations)...
+[enrich] abstracts: 33/71 present (+8 via OpenAlex); OA links +0 via Unpaywall fallback
+      semantic anchor: "COMPUTATIONAL / formal: Mathematical formulation of time-varying Gaussian primitives and algorithmic comparison. 4D Gaussian Splatting. time-dependent Gaussians, temporal Gaussian Splatting, 4D radiance fields, Gaussian splatting algorithm"
+[3a]  Scoring semantic similarity (SBERT embeddings)...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 6284.84it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[semantic] SBERT all-MiniLM-L6-v2 on cuda
+[3/4] Ranking by relevance (semantic + lexical, citation-aware)...
+      refined  : "What exactly is 4D Gaussian Splatting and how does it differ from traditional 3D Gaussian Splatting? How do these methods represent dynamic scenes and capture object movement over time, and what are the challenges in achieving high-quality reconstruction while maintaining real-time rendering?"
+      keywords : []
+      intent   : None
+[2/4] Retrieving from crossref,arxiv,venue (limit=50, workers=2)...
+      search   : "What exactly is 4D Gaussian Splatting and how does it differ from traditional 3D Gaussian Splatting? How do these methods represent dynamic scenes and capture object movement over time, and what are the challenges in achieving high-quality reconstruction while maintaining real-time rendering?"  (broad / recall)
+[combined] running crossref, arxiv, venue concurrently...
+[crossref] retrieved 16 records
+[arxiv] retrieved 16 entries
+[venue] CVPR: no papers on site — trying official host CVF Open Access (https://openaccess.thecvf.com)
+[venue] CVPR: fetched 1 page(s) but extracted no papers
+[venue] SIGGRAPH: no papers on site — trying official host ACM Digital Library (https://dl.acm.org/journal/tog)
+[venue] SIGGRAPH: fetched 1 page(s) but extracted no papers
+[venue] ICCV: no papers on site — trying official host CVF Open Access (https://openaccess.thecvf.com)
+[venue] ICCV: no pages found (no on-site paper list; search returned nothing)
+[venue] 0 candidate refs from 3 venue(s)
+[web] resolved 0 of 0 candidates
+[combined] crossref → 16 records
+[combined] arxiv → 16 records
+[combined] venue → 0 records
+[combined] merged → 32 after dedupe
+      fetched 32 unique records
+[2b]  Processing (schema enforcement)...
+      kept 32 valid records
+[2c]  Enriching metadata (abstracts, OA links, citations)...
+[enrich] abstracts: 25/32 present (+8 via OpenAlex); OA links +0 via Unpaywall fallback
+[3a]  Scoring semantic similarity (SBERT embeddings)...
+[3/4] Ranking by relevance (semantic + lexical, citation-aware)...
+[venue] verifying venue links via web search...
+[venue] International Conference on Runtime Verification (RV): URL unverifiable (https://rv-conference.org/) → search-only by name
+[venue] Autonomous Agents and Multi-Agent Systems (Journal): URL unverifiable (https://link.springer.com/journal/10458) → search-only by name
+[web] search via browser (5 hits) — DDG HTTP endpoint was blocked
+[venue] grounded USENIX Security Symposium: https://www.usenix.org/conference/usenixsecurity → https://www.usenix.org/conference/usenixsecurity26
+[venue] IEEE Transactions on Dependable and Secure Computing: URL unverifiable (https://www.computer.org/publications/journals/tsc) → search-only by name
+[venue] International Conference on Software Engineering (ICSE): URL unverifiable (https://conf.researchr.org/home/icse) → search-only by name
+[venue] auto-picked AAMAS (International Conference on Autonomous Agents and Multiagent Systems), Autonomous Agents and Multi-Agent Systems (Journal), International Conference on Runtime Verification (RV)
+[venue] finding official sites for 2 added venue(s) via search...
+[venue] verifying venue links via web search...
+[venue] targeting 3 venue(s): AAMAS (International Conference on Autonomous Agents and Multiagent Systems), Autonomous Agents and Multi-Agent Systems (Journal), International Conference on Runtime Verification (RV)
+[1/4] Understanding query...
+      note: query is ambiguous — auto-picked one sense (run interactively to choose):
+            → Practical runtime security monitoring and log-based anomaly detection in distributed MAS
+              other sense: Formal runtime verification and logical monitoring of agent interaction protocols
+              other sense: Adversarial robustness and attack detection in multi-agent reinforcement learning
+              other sense: Trust, reputation, and security governance in socio-technical MAS
+      refined  : "Adversarial detection in multi-agent systems"
+      keywords : ['runtime monitoring', 'intrusion detection', 'telemetry analysis', 'distributed systems security']
+      intent   : implementation
+[2/4] Retrieving from crossref,arxiv,venue (limit=50, workers=2)...
+      search   : "Adversarial detection in multi-agent systems"  (broad / recall)
+[combined] running crossref, arxiv, venue concurrently...
+[arxiv] retrieved 16 entries
+[crossref] retrieved 16 records
+[venue] AAMAS (International Conference on Autonomous Agents and Multiagent Systems): no papers on site — trying official host IFAAMAS Proceedings (https://www.ifaamas.org/Proceedings/)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] AAMAS (International Conference on Autonomous Agents and Multiagent Systems): fetched 8 page(s) but extracted no papers
+[venue] Autonomous Agents and Multi-Agent Systems (Journal): no papers on site — trying official host SpringerLink (https://link.springer.com/journal/10458)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] Autonomous Agents and Multi-Agent Systems (Journal): 21 candidate(s)
+[venue] International Conference on Runtime Verification (RV): no papers on site — trying official host SpringerLink (https://link.springer.com/)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] International Conference on Runtime Verification (RV): 6 candidate(s)
+[venue] 26 candidate refs from 3 venue(s)
+[web] resolved 16 of 26 candidates
+[combined] crossref → 16 records
+[combined] arxiv → 16 records
+[combined] venue → 16 records
+[combined] merged → 48 after dedupe
+      focus    : "Runtime monitoring of adversarial behavior in multi-agent systems"  (focused / precision)
+[combined] running crossref, arxiv, venue concurrently...
+[crossref] retrieved 16 records
+[arxiv] retrieved 16 entries
+[venue] AAMAS (International Conference on Autonomous Agents and Multiagent Systems): no papers on site — trying official host IFAAMAS (https://www.ifaamas.org/Proceedings/)
+[venue] AAMAS (International Conference on Autonomous Agents and Multiagent Systems): fetched 8 page(s) but extracted no papers
+[venue] Autonomous Agents and Multi-Agent Systems (Journal): no papers on site — trying official host SpringerLink (https://link.springer.com/journal/10458)
+[venue] Autonomous Agents and Multi-Agent Systems (Journal): 20 candidate(s)
+[venue] International Conference on Runtime Verification (RV): no papers on site — trying official host SpringerLink (https://link.springer.com)
+[venue] International Conference on Runtime Verification (RV): fetched 6 page(s) but extracted no papers
+[venue] 19 candidate refs from 3 venue(s)
+[web] resolved 16 of 19 candidates
+[combined] crossref → 16 records
+[combined] arxiv → 16 records
+[combined] venue → 16 records
+[combined] merged → 48 after dedupe
+      fetched 67 unique records
+[2b]  Processing (schema enforcement)...
+      kept 67 valid records
+[2c]  Enriching metadata (abstracts, OA links, citations)...
+[enrich] abstracts: 35/67 present (+5 via OpenAlex); OA links +0 via Unpaywall fallback
+[2d]  Tagged 3 case study / experience-report paper(s)
+      semantic anchor: "Practical runtime security monitoring and log-based anomaly detection in distributed MAS. Adversarial detection in multi-agent systems. runtime monitoring, intrusion detection, telemetry analysis, distributed systems security"
+[3a]  Scoring semantic similarity (SBERT embeddings)...
+[3/4] Ranking by relevance (semantic + lexical, citation-aware)...
+      refined  : "Can telemetry logs from multi-agent systems be used to detect adversarial behaviour at runtime? How can we build monitoring mechanisms or runtime guards that identify suspicious agent interactions and distinguish genuine system anomalies from deliberate attacks?"
+      keywords : []
+      intent   : None
+[2/4] Retrieving from crossref,arxiv,venue (limit=50, workers=2)...
+      search   : "Can telemetry logs from multi-agent systems be used to detect adversarial behaviour at runtime? How can we build monitoring mechanisms or runtime guards that identify suspicious agent interactions and distinguish genuine system anomalies from deliberate attacks?"  (broad / recall)
+[combined] running crossref, arxiv, venue concurrently...
+[crossref] retrieved 16 records
+[arxiv] retrieved 16 entries
+[venue] AAMAS (International Conference on Autonomous Agents and Multiagent Systems): no papers on site — trying official host IFAAMAS Proceedings (https://www.ifaamas.org/Proceedings/)
+[venue] AAMAS (International Conference on Autonomous Agents and Multiagent Systems): fetched 8 page(s) but extracted no papers
+[venue] Autonomous Agents and Multi-Agent Systems (Journal): no papers on site — trying official host SpringerLink (https://link.springer.com/journal/10458)
+[venue] Autonomous Agents and Multi-Agent Systems (Journal): 14 candidate(s)
+[venue] International Conference on Runtime Verification (RV): no papers on site — trying official host Dagstuhl Publishing / LIPIcs (https://www.dagstuhl.de/dagpub/)
+[venue] International Conference on Runtime Verification (RV): no pages found (no on-site paper list; search returned nothing)
+[venue] 13 candidate refs from 3 venue(s)
+[web] resolved 13 of 13 candidates
+[combined] crossref → 16 records
+[combined] arxiv → 16 records
+[combined] venue → 13 records
+[combined] merged → 45 after dedupe
+      fetched 45 unique records
+[2b]  Processing (schema enforcement)...
+      kept 45 valid records
+[2c]  Enriching metadata (abstracts, OA links, citations)...
+[enrich] abstracts: 27/45 present (+3 via OpenAlex); OA links +0 via Unpaywall fallback
+[2d]  Tagged 2 case study / experience-report paper(s)
+[3a]  Scoring semantic similarity (SBERT embeddings)...
+[3/4] Ranking by relevance (semantic + lexical, citation-aware)...
+[venue] verifying venue links via web search...
+[venue] ACM Conference on Computer and Communications Security (ACM CCS): URL unverifiable (https://www.sigsac.org/ccs/) → search-only by name
+[venue] IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP): URL unverifiable (https://www.ieee.org/icassp) → search-only by name
+[venue] ACM Workshop on Artificial Intelligence Security (ACM AISec): URL unverifiable (https://www.sigsac.org/ccs/aisec/) → search-only by name
+[venue] auto-picked IEEE Symposium on Security and Privacy (IEEE S&P), ACM Conference on Computer and Communications Security (ACM CCS), IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
+[venue] finding official sites for 1 added venue(s) via search...
+[venue] verifying venue links via web search...
+[venue] targeting 3 venue(s): IEEE Symposium on Security and Privacy (IEEE S&P), ACM Conference on Computer and Communications Security (ACM CCS), IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
+[1/4] Understanding query...
+      note: query is ambiguous — auto-picked one sense (run interactively to choose):
+            → Computational: Algorithmic detection models and their generalization/robustness to novel generative architectures
+              other sense: Sociotechnical: Detection systems as governance tools, platform moderation, and policy implications
+      refined  : "Deepfake detection generalization"
+      keywords : ['deepfake detection', 'synthetic media forensics', 'domain generalization', 'out-of-distribution detection', 'adversarial robustness']
+      intent   : survey
+[2/4] Retrieving from crossref,arxiv,venue (limit=50, workers=2)...
+      search   : "Deepfake detection generalization"  (broad / recall)
+[combined] running crossref, arxiv, venue concurrently...
+[arxiv] retrieved 16 entries
+[crossref] retrieved 16 records
+[venue] IEEE Symposium on Security and Privacy (IEEE S&P): no papers on site — trying official host IEEE Xplore (https://ieeexplore.ieee.org/xpl/conhome/10246/all_proceedings)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] IEEE Symposium on Security and Privacy (IEEE S&P): 7 candidate(s)
+[venue] ACM Conference on Computer and Communications Security (ACM CCS): no papers on site — trying official host ACM Digital Library (https://dl.acm.org)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] ACM Conference on Computer and Communications Security (ACM CCS): fetched 6 page(s) but extracted no papers
+[venue] IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR): no papers on site — trying official host CVF Open Access (https://openaccess.thecvf.com)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR): 6 candidate(s)
+[venue] 11 candidate refs from 3 venue(s)
+[web] resolved 11 of 11 candidates
+[combined] crossref → 16 records
+[combined] arxiv → 16 records
+[combined] venue → 11 records
+[combined] merged → 43 after dedupe
+      focus    : "Deepfake detection cross-dataset generalization"  (focused / precision)
+[combined] running crossref, arxiv, venue concurrently...
+[arxiv] rate-limited (429) — waiting 10s (attempt 1/4)
+[crossref] retrieved 16 records
+[arxiv] retrieved 16 entries
+[venue] IEEE Symposium on Security and Privacy (IEEE S&P): no papers on site — trying official host IEEE Xplore (https://ieeexplore.ieee.org)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] IEEE Symposium on Security and Privacy (IEEE S&P): 9 candidate(s)
+[venue] ACM Conference on Computer and Communications Security (ACM CCS): no papers on site — trying official host ACM Digital Library (https://dl.acm.org/)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] ACM Conference on Computer and Communications Security (ACM CCS): 2 candidate(s)
+[venue] IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR): no papers on site — trying official host CVF Open Access (https://openaccess.thecvf.com)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR): 6 candidate(s)
+[venue] 11 candidate refs from 3 venue(s)
+[web] resolved 11 of 11 candidates
+[combined] crossref → 16 records
+[combined] arxiv → 16 records
+[combined] venue → 11 records
+[combined] merged → 43 after dedupe
+      fetched 59 unique records
+[2b]  Processing (schema enforcement)...
+      kept 59 valid records
+[2c]  Enriching metadata (abstracts, OA links, citations)...
+[enrich] abstracts: 31/59 present (+12 via OpenAlex); OA links +0 via Unpaywall fallback
+[2d]  Tagged 4 case study / experience-report paper(s)
+      semantic anchor: "Computational: Algorithmic detection models and their generalization/robustness to novel generative architectures. Deepfake detection generalization. deepfake detection, synthetic media forensics, domain generalization, out-of-distribution detection, adversarial robustness"
+[3a]  Scoring semantic similarity (SBERT embeddings)...
+[3/4] Ranking by relevance (semantic + lexical, citation-aware)...
+      refined  : "What are the most effective techniques for detecting deepfake images, videos and audio? How do current detection methods identify manipulated media, and why do these methods often fail when faced with new generative models or deepfakes created using techniques they weren't trained on?"
+      keywords : []
+      intent   : None
+[2/4] Retrieving from crossref,arxiv,venue (limit=50, workers=2)...
+      search   : "What are the most effective techniques for detecting deepfake images, videos and audio? How do current detection methods identify manipulated media, and why do these methods often fail when faced with new generative models or deepfakes created using techniques they weren't trained on?"  (broad / recall)
+[combined] running crossref, arxiv, venue concurrently...
+[crossref] retrieved 16 records
+[arxiv] retrieved 16 entries
+[venue] IEEE Symposium on Security and Privacy (IEEE S&P): no papers on site — trying official host IEEE Xplore (https://ieeexplore.ieee.org/xpl/conhome/1018102/all-proceedings)
+[venue] IEEE Symposium on Security and Privacy (IEEE S&P): fetched 4 page(s) but extracted no papers
+[venue] ACM Conference on Computer and Communications Security (ACM CCS): no papers on site — trying official host ACM Digital Library (https://dl.acm.org/)
+[venue] ACM Conference on Computer and Communications Security (ACM CCS): no pages found (no on-site paper list; search returned nothing)
+[venue] IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR): no papers on site — trying official host CVF Open Access (https://openaccess.thecvf.com)
+[venue] IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR): fetched 1 page(s) but extracted no papers
+[venue] 0 candidate refs from 3 venue(s)
+[web] resolved 0 of 0 candidates
+[combined] crossref → 16 records
+[combined] arxiv → 16 records
+[combined] venue → 0 records
+[combined] merged → 32 after dedupe
+      fetched 32 unique records
+[2b]  Processing (schema enforcement)...
+      kept 32 valid records
+[2c]  Enriching metadata (abstracts, OA links, citations)...
+[enrich] abstracts: 17/32 present (+0 via OpenAlex); OA links +0 via Unpaywall fallback
+[3a]  Scoring semantic similarity (SBERT embeddings)...
+[3/4] Ranking by relevance (semantic + lexical, citation-aware)...
+P02: 10 on / 10 off; venues: CVPR, SIGGRAPH, ICCV
+P05: 10 on / 10 off; venues: AAMAS (International Conference on Autonomous Agents and Multiagent Systems), Autonomous Agents and Multi-Agent Systems (Journal), International Conference on Runtime Verification (RV)
+P08: 10 on / 10 off; venues: IEEE Symposium on Security and Privacy (IEEE S&P), ACM Conference on Computer and Communications Security (ACM CCS), IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)

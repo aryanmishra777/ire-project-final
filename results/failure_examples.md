@@ -1,0 +1,26 @@
+# Largest BM25 nDCG@10 losses under the rephrase rewrite
+
+- **q421** (Δ BM25 -1.000, Δ dense +0.000)
+  - question: Provide an example of a paper which proposes a method to learn a dynamic (conditioned on the input) sequence tokenizer (segmenter) via standard gradient backpropagation.
+  - rewrite: dynamic sequence tokenizer conditioned on input gradient backpropagation
+  - rare terms lost: none
+- **q126** (Δ BM25 -1.000, Δ dense +0.000)
+  - question: Could you recommend a study that explores the difficulties in creating shared multilingual vocabularies, especially focusing on the problem of over segmentation in low-resource languages?
+  - rewrite: shared multilingual vocabularies over segmentation low-resource languages
+  - rare terms lost: none
+- **q274** (Δ BM25 -0.667, Δ dense +0.000)
+  - question: Have there been any advancements in language models that operate without tokenization and emphasize encoding at the character level, and what benefits might they have compared to conventional methods using subword tokenization?
+  - rewrite: advancements character-level language models without tokenization benefits compared subword tokenization
+  - rare terms lost: none
+- **q428** (Δ BM25 -0.644, Δ dense +0.000)
+  - question: What paper compares humans' and language models' non-literal interpretations of utterances featuring phenomena like deceit, irony, and humor?
+  - rewrite: humans vs language models non-literal interpretation deceit irony humor
+  - rare terms lost: none
+- **q230** (Δ BM25 -0.613, Δ dense -0.431)
+  - question: Could you suggest research that investigates across multiple languages how dictionary definitions and word embedding models compare?
+  - rewrite: dictionary definitions word embedding models comparison multiple languages
+  - rare terms lost: none
+- **q033** (Δ BM25 -0.569, Δ dense -0.131)
+  - question: Could you recommend datasets that include SQL annotations over WikiTQ?
+  - rewrite: datasets SQL annotations WikiTQ
+  - rare terms lost: none

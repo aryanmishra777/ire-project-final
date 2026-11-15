@@ -1,0 +1,145 @@
+[1/4] Understanding query...
+      note: query is ambiguous — auto-picked one sense (run interactively to choose):
+            → Formal methods approach to verifying protocol and language specifications using mathematical models and automated reasoning.
+              other sense: Software engineering approach to testing real-world implementations against published technical standards and specifications.
+      refined  : "Formal Specification Verification"
+      keywords : ['formal verification', 'specification formalization', 'model checking', 'theorem proving', 'protocol verification']
+      intent   : survey
+[2/4] Retrieving from crossref,arxiv (limit=50, workers=2)...
+      search   : "Formal Specification Verification"  (broad / recall)
+[combined] running crossref, arxiv concurrently...
+[arxiv] retrieved 25 entries
+[crossref] retrieved 25 records
+[combined] crossref → 25 records
+[combined] arxiv → 25 records
+[combined] merged → 50 after dedupe
+      focus    : "Specification Formalization and Conformance Checking"  (focused / precision)
+[combined] running crossref, arxiv concurrently...
+[crossref] retrieved 25 records
+[arxiv] retrieved 25 entries
+[combined] crossref → 25 records
+[combined] arxiv → 25 records
+[combined] merged → 50 after dedupe
+      fetched 97 unique records
+[2b]  Processing (schema enforcement)...
+      kept 97 valid records
+[2c]  Enriching metadata (abstracts, OA links, citations)...
+[enrich] abstracts: 50/97 present (+0 via OpenAlex); OA links +0 via Unpaywall fallback
+[2d]  Tagged 5 case study / experience-report paper(s)
+      semantic anchor: "Formal methods approach to verifying protocol and language specifications using mathematical models and automated reasoning.. Formal Specification Verification. formal verification, specification formalization, model checking, theorem proving, protocol verification"
+[3a]  Scoring semantic similarity (SBERT embeddings)...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1661.88it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[semantic] SBERT all-MiniLM-L6-v2 on cuda
+[3/4] Ranking by relevance (semantic + lexical, citation-aware)...
+      refined  : "How can we formally test and verify large and complex protocols like CORBA or programming language standards? Is it possible to automatically translate their specifications into formal models, and how can we ensure that an implementation actually conforms to the original specification?"
+      keywords : []
+      intent   : None
+[2/4] Retrieving from crossref,arxiv (limit=50, workers=2)...
+      search   : "How can we formally test and verify large and complex protocols like CORBA or programming language standards? Is it possible to automatically translate their specifications into formal models, and how can we ensure that an implementation actually conforms to the original specification?"  (broad / recall)
+[combined] running crossref, arxiv concurrently...
+[crossref] retrieved 25 records
+[arxiv] retrieved 25 entries
+[combined] crossref → 25 records
+[combined] arxiv → 25 records
+[combined] merged → 50 after dedupe
+      fetched 50 unique records
+[2b]  Processing (schema enforcement)...
+      kept 50 valid records
+[2c]  Enriching metadata (abstracts, OA links, citations)...
+[enrich] abstracts: 26/50 present (+1 via OpenAlex); OA links +0 via Unpaywall fallback
+[2d]  Tagged 1 case study / experience-report paper(s)
+[3a]  Scoring semantic similarity (SBERT embeddings)...
+[3/4] Ranking by relevance (semantic + lexical, citation-aware)...
+[venue] verifying venue links via web search...
+[venue] grounded Interspeech: https://www.interspeech.org/ → https://interspeech2026.org/
+[venue] grounded ASRU: https://asru-workshop.org/ → https://asru-ai4csl.github.io/Official-Website/
+[web] DDG rate-limited its HTTP endpoint — routing searches through the browser for the rest of this run
+/home/ubuntu/tool_w2/browser_render.py:59: LeakWarning: Canvas and WebGL readback return random data, as privacy.resistFingerprinting does in LibreWolf, Tor Browser and Mullvad Browser. Stock Firefox does not do this, so the browser reads as a privacy-hardened Firefox. It is on because the identity claims another OS or GPU than this machine's, whose canvas would show the real one. Pass `canvas_noise=False` to keep stock canvas behaviour.
+If this is intentional, pass `i_know_what_im_doing=True`.
+  with Camoufox(headless=_headless()) as browser:
+[venue] IEEE/ACM Transactions on Audio, Speech, and Language Processing: URL unverifiable (https://www.computer.org/publications/journals/taslp/) → search-only by name
+[web] search via browser (5 hits) — DDG HTTP endpoint was blocked
+[venue] auto-picked Interspeech, ICASSP, ASRU
+[venue] targeting 3 venue(s): Interspeech, ICASSP, ASRU
+[1/4] Understanding query...
+      note: query is ambiguous — auto-picked one sense (run interactively to choose):
+            → Computational modeling and neural architectures for code-switched speech recognition
+              other sense: Software engineering and deployment pipelines for multilingual ASR systems
+              other sense: Sociolinguistic variation and algorithmic bias in code-switched speech technology
+      refined  : "Code-switched speech recognition"
+      keywords : ['automatic speech recognition', 'code-switching', 'multilingual speech recognition', 'low-resource speech recognition', 'cross-lingual ASR']
+      intent   : survey
+[2/4] Retrieving from crossref,arxiv,venue (limit=50, workers=2)...
+      search   : "Code-switched speech recognition"  (broad / recall)
+[combined] running crossref, arxiv, venue concurrently...
+[arxiv] retrieved 16 entries
+[crossref] retrieved 16 records
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] Interspeech: 4 candidate(s)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] ICASSP: 4 candidate(s)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] ASRU: 14 candidate(s)
+[venue] 20 candidate refs from 3 venue(s)
+[web] resolved 16 of 20 candidates
+[combined] crossref → 16 records
+[combined] arxiv → 16 records
+[combined] venue → 16 records
+[combined] merged → 48 after dedupe
+      focus    : "Code-switched speech recognition low-resource adaptation"  (focused / precision)
+[combined] running crossref, arxiv, venue concurrently...
+[arxiv] retrieved 16 entries
+[crossref] retrieved 16 records
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] Interspeech: 9 candidate(s)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] ICASSP: 6 candidate(s)
+[web] search via browser (4 hits) — DDG HTTP endpoint was blocked
+[venue] ASRU: 4 candidate(s)
+[venue] 15 candidate refs from 3 venue(s)
+[web] resolved 15 of 15 candidates
+[combined] crossref → 16 records
+[combined] arxiv → 16 records
+[combined] venue → 15 records
+[combined] merged → 47 after dedupe
+      fetched 81 unique records
+[2b]  Processing (schema enforcement)...
+      kept 81 valid records
+[2c]  Enriching metadata (abstracts, OA links, citations)...
+[enrich] abstracts: 46/81 present (+25 via OpenAlex); OA links +0 via Unpaywall fallback
+[2d]  Tagged 3 case study / experience-report paper(s)
+      semantic anchor: "Computational modeling and neural architectures for code-switched speech recognition. Code-switched speech recognition. automatic speech recognition, code-switching, multilingual speech recognition, low-resource speech recognition, cross-lingual ASR"
+[3a]  Scoring semantic similarity (SBERT embeddings)...
+[3/4] Ranking by relevance (semantic + lexical, citation-aware)...
+      refined  : "How do automatic speech recognition systems handle code-switching when speakers move between two or more languages within the same sentence? Why do existing speech recognition models struggle with this, and what techniques can improve recognition accuracy, particularly for languages with limited training data?"
+      keywords : []
+      intent   : None
+[2/4] Retrieving from crossref,arxiv,venue (limit=50, workers=2)...
+      search   : "How do automatic speech recognition systems handle code-switching when speakers move between two or more languages within the same sentence? Why do existing speech recognition models struggle with this, and what techniques can improve recognition accuracy, particularly for languages with limited training data?"  (broad / recall)
+[combined] running crossref, arxiv, venue concurrently...
+[crossref] retrieved 16 records
+[arxiv] retrieved 16 entries
+[venue] Interspeech: no papers on site — trying official host ISCA Archive (https://www.isca-speech.org/archive/)
+[venue] Interspeech: fetched 1 page(s) but extracted no papers
+[venue] ICASSP: no papers on site — trying official host IEEE Xplore (https://ieeexplore.ieee.org)
+[venue] ICASSP: fetched 1 page(s) but extracted no papers
+[venue] ASRU: no papers on site — trying official host IEEE Xplore (https://ieeexplore.ieee.org)
+[venue] ASRU: fetched 1 page(s) but extracted no papers
+[venue] 0 candidate refs from 3 venue(s)
+[web] resolved 0 of 0 candidates
+[combined] crossref → 16 records
+[combined] arxiv → 16 records
+[combined] venue → 0 records
+[combined] merged → 32 after dedupe
+      fetched 32 unique records
+[2b]  Processing (schema enforcement)...
+      kept 32 valid records
+[2c]  Enriching metadata (abstracts, OA links, citations)...
+[enrich] abstracts: 21/32 present (+1 via OpenAlex); OA links +0 via Unpaywall fallback
+[3a]  Scoring semantic similarity (SBERT embeddings)...
+[3/4] Ranking by relevance (semantic + lexical, citation-aware)...
+P04: 10 on / 10 off; venues: none
+P07: 10 on / 10 off; venues: Interspeech, ICASSP, ASRU

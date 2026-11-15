@@ -1,0 +1,177 @@
+{
+  "pid": "P07",
+  "source": "crossref,arxiv",
+  "venues": [
+    "Interspeech",
+    "ICASSP",
+    "ASRU"
+  ],
+  "model": "qwen3.6-moe:latest",
+  "question": "How do automatic speech recognition systems handle code-switching when speakers move between two or more languages within the same sentence? Why do existing speech recognition models struggle with this, and what techniques can improve recognition accuracy, particularly for languages with limited training data?",
+  "rewrite": "Code-switched speech recognition | Code-switched speech recognition low-resource adaptation",
+  "on": [
+    {
+      "id": "10.21437/interspeech.2019-2680",
+      "title": "SpecAugment: A Simple Data Augmentation Method for Automatic Speech Recognition",
+      "abstract": "We present SpecAugment, a simple data augmentation method for speech recognition. SpecAugment is applied directly to the feature inputs of a neural network (i.e., filter bank coefficients). The augmentation policy consists of warping the features, masking blocks of frequency channels, and masking blocks of time steps. We apply SpecAugment on Listen, Attend and Spell networks for end-to-end speech recognition tasks. We achieve state-of-the-art performance on the LibriSpeech 960h and Swichboard 300h tasks, outperforming all prior work. On LibriSpeech, we achieve 6.8% WER on test-other without the use of a language model, and 5.8% WER with shallow fusion with a language model. This compares to the previous state-of-the-art hybrid system of 7.5% WER. For Switchboard, we achieve 7.2%/14.6% on the Switchboard/CallHome portion of the Hub5'00 test set without the use of a language model, and 6.8%/14.1% with shallow fusion, which compares to the previous state-of-the-art hybrid system at 8.3%/17.3% WER.",
+      "year": "2019",
+      "venue": "Interspeech 2019",
+      "doi": "10.21437/interspeech.2019-2680"
+    },
+    {
+      "id": "10.21437/interspeech.2010-563",
+      "title": "SEAME: a Mandarin-English code-switching speech corpus in south-east asia",
+      "abstract": "In Singapore and Malaysia, people often speak a mixture of Mandarin and English within a single sentence. We call such sentences intra-sentential code-switch sentences. In this paper, we report on the development of a Mandarin-English codeswitching spontaneous speech corpus: SEAME. The corpus is developed as part of a multilingual speech recognition project and will be used to examine how Mandarin-English codeswitch speech occurs in the spoken language in South-East Asia. Additionally, it can provide insights into the development of large vocabulary continuous speech recognition (LVCSR) for code-switching speech. The corpus collected consists of intra-sentential code-switching utterances that are recorded under both interview and conversational settings. This paper describes the corpus design and the analysis of collected corpus.",
+      "year": "2010",
+      "venue": "Interspeech 2010",
+      "doi": "10.21437/interspeech.2010-563"
+    },
+    {
+      "id": "10.21437/interspeech.2020-2488",
+      "title": "Multi-Encoder-Decoder Transformer for Code-Switching Speech Recognition",
+      "abstract": "Code-switching (CS) occurs when a speaker alternates words of two or more languages within a single sentence or across sentences. Automatic speech recognition (ASR) of CS speech has to deal with two or more languages at the same time. In this study, we propose a Transformer-based architecture with two symmetric language-specific encoders to capture the individual language attributes, that improve the acoustic representation of each language. These representations are combined using a language-specific multi-head attention mechanism in the decoder module. Each encoder and its corresponding attention module in the decoder are pre-trained using a large monolingual corpus aiming to alleviate the impact of limited CS training data. We call such a network a multi-encoder-decoder (MED) architecture. Experiments on the SEAME corpus show that the proposed MED architecture achieves 10.2% and 10.8% relative error rate reduction on the CS evaluation sets with Mandarin and English as the matrix language respectively.",
+      "year": "2020",
+      "venue": "Interspeech 2020",
+      "doi": "10.21437/interspeech.2020-2488"
+    },
+    {
+      "id": "10.1109/icassp48485.2024.10448335",
+      "title": "Enhancing Code-Switching Speech Recognition With Interactive Language Biases",
+      "abstract": "Languages usually switch within a multilingual speech signal, especially in a bilingual society. This phenomenon is referred to as code-switching (CS), making automatic speech recognition (ASR) challenging under a multilingual scenario. We propose to improve CS-ASR by biasing the hybrid CTC/attention ASR model with multi-level language information comprising frame-and token-level language posteriors. The interaction between various resolutions of language biases is subsequently explored in this work. We conducted experiments on datasets from the ASRU 2019 code-switching challenge. Compared to the baseline, the proposed interactive language biases (ILB) method achieves higher performance and ablation studies highlight the effects of different language biases and their interactions. In addition, the results presented indicate that language bias implicitly enhances internal language modeling, leading to performance degradation after employing an external language model.",
+      "year": "2024",
+      "venue": "ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+      "doi": "10.1109/icassp48485.2024.10448335"
+    },
+    {
+      "id": "10.1109/icassp48485.2024.10446258",
+      "title": "Attention-Guided Adaptation for Code-Switching Speech Recognition",
+      "abstract": "The prevalence of the powerful multilingual models, such as Whisper, has significantly advanced the researches on speech recognition. However, these models often struggle with handling the code-switching setting, which is essential in multilingual speech recognition. Recent studies have attempted to address this setting by separating the modules for different languages to ensure distinct latent representations for languages. Some other methods considered the switching mechanism based on language identification. In this study, a new attention-guided adaptation is proposed to conduct parameter-efficient learning for bilingual ASR. This method selects those attention heads in a model which closely express language identities and then guided those heads to be correctly attended with their corresponding languages. The experiments on the Mandarin-English code-switching speech corpus show that the proposed approach achieves a 14.2% mixed error rate, surpassing state-of-the-art method, where only 5.6% additional parameters over Whisper are trained.",
+      "year": "2024",
+      "venue": "ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+      "doi": "10.1109/icassp48485.2024.10446258"
+    },
+    {
+      "id": "10.21437/interspeech.2018-1171",
+      "title": "Homophone Identification and Merging for Code-switched Speech Recognition",
+      "abstract": "Code-switching or mixing is the use of multiple languages in a single utterance or conversation. Borrowing occurs when a word from a foreign language becomes part of the vocabulary of a language. In multilingual societies, switching/mixing and borrowing are not always clearly distinguishable. Due to this, transcription of code-switched and borrowed words is often not standardized, and leads to the presence of homophones in the training data. In this work, we automatically identify and disambiguate homophones in code-switched data to improve recognition of code-switched speech. We use a WX-based common pronunciation scheme for both languages being mixed and unify the homophones during training, which results in a lower word error rate for systems built using this data. We also extend this framework to propose a metric for code-switched speech recognition that takes into account homophones in both languages while calculating WER, which can help provide a more accurate picture of errors the ASR system makes on code-switched speech.",
+      "year": "2018",
+      "venue": "Interspeech 2018",
+      "doi": "10.21437/interspeech.2018-1171"
+    },
+    {
+      "id": "10.63317/477upr9ikf9n",
+      "title": "Code-Switching in End-to-End Automatic Speech Recognition: A Systematic Literature Review",
+      "abstract": "Motivated by a growing research interest in automatic speech recognition (ASR) and the growing body of work for languages in which code-switching (CS) often occurs, we present a systematic literature review of code-switching in end-to-end ASR models.We collect and manually annotate papers published in peer-reviewed venues.We document the languages considered, datasets, metrics, model choices, and performance, and present a discussion of challenges in end-to-end ASR for code-switching.Our analysis thus provides insights into current research efforts and available resources, as well as opportunities and gaps to guide future research.",
+      "year": "2026",
+      "venue": "Proceedings of the Language Resources and Evaluation Conference",
+      "doi": "10.63317/477upr9ikf9n"
+    },
+    {
+      "id": "10.1109/icassp49357.2023.10097151",
+      "title": "Towards Zero-Shot Code-Switched Speech Recognition",
+      "abstract": "In this work, we seek to build effective code-switched (CS) automatic speech recognition systems (ASR) under the zero-shot set-ting where no transcribed CS speech data is available for training. Previously proposed frameworks which conditionally factorize the bilingual task into its constituent monolingual parts are a promising starting point for leveraging monolingual data efficiently. However, these methods require the monolingual modules to perform language segmentation. That is, each monolingual module has to simultaneously detect CS points and transcribe speech segments of one language while ignoring those of other languages – not a trivial task. We propose to simplify each monolingual module by allowing them to transcribe all speech segments indiscriminately with a monolingual script (i.e. transliteration). This simple modification passes the responsibility of CS point detection to subsequent bilingual modules which determine the final output by considering multiple monolingual transliterations along with external language model information. We apply this transliteration-based approach in an end-to-end differentiable neural network and demonstrate its efficacy for zero-shot CS ASR on Mandarin-English SEAME test sets.",
+      "year": "2023",
+      "venue": "ICASSP 2023 - 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+      "doi": "10.1109/icassp49357.2023.10097151"
+    },
+    {
+      "id": "10.1007/s10579-015-9303-x",
+      "title": "Mandarin–English code-switching speech corpus in South-East Asia: SEAME",
+      "abstract": "",
+      "year": "2015",
+      "venue": "Language Resources and Evaluation",
+      "doi": "10.1007/s10579-015-9303-x"
+    },
+    {
+      "id": "10.1109/asru51503.2021.9688174",
+      "title": "Non-Autoregressive Mandarin-English Code-Switching Speech Recognition",
+      "abstract": "Mandarin-English code-switching (CS) is frequently used among East and Southeast Asian people. However, the intra-sentence language switching of the two very different languages makes recognizing CS speech challenging. Meanwhile, the recent successful non-autoregressive (NAR) ASR models remove the need for left-to-right beam decoding in autoregressive (AR) models and achieved outstanding performance and fast inference speed, but it has not been applied to Mandarin-English CS speech recognition. This paper takes advantage of the Mask-CTC NAR ASR framework to tackle the CS speech recognition issue. We further propose to change the Mandarin output target of the encoder to Pinyin for faster encoder training and introduce the Pinyin-to-Mandarin decoder to learn contextualized information. Moreover, we use word embedding label smoothing to regularize the decoder with contextualized information and projection matrix regularization to bridge that gap between the encoder and decoder. We evaluate these methods on the SEAME corpus and achieved exciting results.",
+      "year": "2021",
+      "venue": "2021 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)",
+      "doi": "10.1109/asru51503.2021.9688174"
+    }
+  ],
+  "off": [
+    {
+      "id": "10.1016/s0925-2312(00)00308-8",
+      "title": "A survey of hybrid ANN/HMM models for automatic speech recognition",
+      "abstract": "",
+      "year": "2001",
+      "venue": "Neurocomputing",
+      "doi": "10.1016/s0925-2312(00)00308-8"
+    },
+    {
+      "id": "10.1016/s0167-6393(00)00095-9",
+      "title": "Multilingual speech recognition in seven languages",
+      "abstract": "",
+      "year": "2001",
+      "venue": "Speech Communication",
+      "doi": "10.1016/s0167-6393(00)00095-9"
+    },
+    {
+      "id": "10.1016/s0167-6393(97)00018-6",
+      "title": "Production models as a structural basis for automatic speech recognition",
+      "abstract": "",
+      "year": "1997",
+      "venue": "Speech Communication",
+      "doi": "10.1016/s0167-6393(97)00018-6"
+    },
+    {
+      "id": "10.1016/s0167-6393(97)00029-0",
+      "title": "MMIE training of large vocabulary recognition systems",
+      "abstract": "",
+      "year": "1997",
+      "venue": "Speech Communication",
+      "doi": "10.1016/s0167-6393(97)00029-0"
+    },
+    {
+      "id": "2107.01573v1",
+      "title": "Arabic Code-Switching Speech Recognition using Monolingual Data",
+      "abstract": "Code-switching in automatic speech recognition (ASR) is an important challenge due to globalization. Recent research in multilingual ASR shows potential improvement over monolingual systems. We study key issues related to multilingual modeling for ASR through a series of large-scale ASR experiments. Our innovative framework deploys a multi-graph approach in the weighted finite state transducers (WFST) framework. We compare our WFST decoding strategies with a transformer sequence to sequence system trained on the same data. Given a code-switching scenario between Arabic and English languages, our results show that the WFST decoding approaches were more suitable for the intersentential code-switching datasets. In addition, the transformer system performed better for intrasentential code-switching task. With this study, we release an artificially generated development and test sets, along with ecological code-switching test set, to benchmark the ASR performance.",
+      "year": "2021",
+      "venue": "arXiv",
+      "doi": ""
+    },
+    {
+      "id": "2403.05887v3",
+      "title": "Aligning Speech to Languages to Enhance Code-switching Speech Recognition",
+      "abstract": "Code-switching (CS) refers to the switching of languages within a speech signal and results in language confusion for automatic speech recognition (ASR). To address language confusion, we propose a language alignment loss (LAL) that aligns acoustic features to pseudo-language labels learned from the ASR decoder during ASR training. This approach enables frame-level language identification without the need for frame-level language annotations. To further tackle the complex token alternatives for language modeling in bilingual scenarios, we propose to employ large language models via a generative error correction method. A linguistic hint, derived from LAL outputs and decoded hypotheses, is introduced to guide the prompting and enhance the LLM-based generative error correction for CS-ASR. The proposed methods are evaluated on the SEAME dataset and data from the ASRU 2019 Mandarin-English code-switching speech recognition challenge. The incorporation of the proposed language alignment loss improves CS-ASR performance for both hybrid CTC/attention and Whisper models on both datasets, with only a negligible increase in the number of parameters. This work also highlights the efficacy of language alignment loss in balancing primary-language-dominant bilingual data during training, with an 8.6% relative improvement on the ASRU dataset compared to the baseline model. Performance evaluation using large language models reveals the advantage of the linguistic hint by achieving 14.1% and 5.5% relative improvement on test sets of the ASRU and SEAME datasets, respectively.",
+      "year": "2024",
+      "venue": "arXiv",
+      "doi": ""
+    },
+    {
+      "id": "2011.03118v1",
+      "title": "Multilingual Bottleneck Features for Improving ASR Performance of Code-Switched Speech in Under-Resourced Languages",
+      "abstract": "In this work, we explore the benefits of using multilingual bottleneck features (mBNF) in acoustic modelling for the automatic speech recognition of code-switched (CS) speech in African languages. The unavailability of annotated corpora in the languages of interest has always been a primary challenge when developing speech recognition systems for this severely under-resourced type of speech. Hence, it is worthwhile to investigate the potential of using speech corpora available for other better-resourced languages to improve speech recognition performance. To achieve this, we train a mBNF extractor using nine Southern Bantu languages that form part of the freely available multilingual NCHLT corpus. We append these mBNFs to the existing MFCCs, pitch features and i-vectors to train acoustic models for automatic speech recognition (ASR) in the target code-switched languages. Our results show that the inclusion of the mBNF features leads to clear performance improvements over a baseline trained without the mBNFs for code-switched English-isiZulu, English-isiXhosa, English-Sesotho and English-Setswana speech.",
+      "year": "2020",
+      "venue": "http://festvox.org/cedar/WSTCSMC2020.pdf",
+      "doi": ""
+    },
+    {
+      "id": "10.1109/41.538613",
+      "title": "Genetic algorithm for optimizing the nonlinear time alignment of automatic speech recognition systems",
+      "abstract": "Dynamic time warping (DTW) is a nonlinear time-alignment technique for automatic speech recognition (ASR) systems. It had been widely used in many commercial and industrial products, ranging from electronic dailies/dictionaries to wireless voice digit dialers. DTW has the advantages of fast training and searching times, which makes it more popular than other available ASR techniques. However, there exist some limitations to DTW, such as the stringent rule on slope weighting, the nontrivial computation of the K-best paths, and the significant increase in computational time when the endpoint constraint is relaxed or the variations of the length of pattern increased. In this paper, a stochastic method called the genetic algorithm (GA), which is used to solve the nonlinear time alignment problem, is presented. Experimental results show that the GA has a better performance than the DTW. In addition, two derivatives of GA: the hybrid GA and the parallel GA are also presented.",
+      "year": "1996",
+      "venue": "IEEE Transactions on Industrial Electronics",
+      "doi": "10.1109/41.538613"
+    },
+    {
+      "id": "10.1109/ASRU51503.2021.9688061",
+      "title": "Comparison of Self-Supervised Speech Pre-Training Methods on Flemish Dutch",
+      "abstract": "Recent research in speech processing exhibits a growing interest in unsupervised and self-supervised representation learning from unlabelled data to alleviate the need for large amounts of annotated data. We investigate several popular pre-training methods and apply them to Flemish Dutch. We compare off-the-shelf English pre-trained models to models trained on an increasing amount of Flemish data. We find that the most important factors for positive transfer to downstream speech recognition tasks include a substantial amount of data and a matching pre-training domain. Ideally, we also finetune on an annotated subset in the target language. All pre-trained models improve linear phone separability in Flemish, but not all methods improve Automatic Speech Recognition. We experience superior performance with wav2vec 2.0 and we obtain a 30% WER improvement by finetuning the multilingually pre-trained XLSR-53 model on Flemish Dutch, after integration into an HMM-DNN acoustic model.",
+      "year": "2021",
+      "venue": "2021 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU), pp. 169-176",
+      "doi": "10.1109/ASRU51503.2021.9688061"
+    },
+    {
+      "id": "10.1121/1.419406",
+      "title": "Instantaneous context switching for speech recognition systems",
+      "abstract": "",
+      "year": "1997",
+      "venue": "The Journal of the Acoustical Society of America",
+      "doi": "10.1121/1.419406"
+    }
+  ],
+  "seconds": 2102
+}

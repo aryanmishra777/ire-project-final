@@ -1,0 +1,20 @@
+# Python 3.12. On a CPU-only machine install torch first from
+# https://download.pytorch.org/whl/cpu ; on Linux with an NVIDIA GPU plain pip gets the CUDA build.
+torch==2.15.0
+sentence-transformers==6.3.0
+transformers==5.23.0
+datasets==5.2.0
+bm25s==0.3.16
+PyStemmer==3.1.0
+numpy==2.5.4
+pandas==3.1.1
+pyarrow==26.0.1
+scipy==1.18.1
+tabulate==0.10.0
+matplotlib==3.11.2
+tqdm==4.70.1
+python-dotenv==1.2.4
+ollama==0.6.3
+groq==1.7.0
+python-pptx==1.0.2
+edge-tts==7.3.1

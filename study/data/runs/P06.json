@@ -1,0 +1,177 @@
+{
+  "pid": "P06",
+  "source": "crossref,arxiv",
+  "venues": [
+    "ICAIL",
+    "Artificial Intelligence and Law",
+    "JURIX"
+  ],
+  "model": "qwen3.6-moe:latest",
+  "question": "How can we automatically check whether legal documents comply with the requirements specified in regulations or other legal documents? Can NLP techniques identify missing clauses, conflicting requirements and violations, and how reliable are these methods compared with manual legal review?",
+  "rewrite": "Legal Compliance Checking | Legal Compliance Checking NLP",
+  "on": [
+    {
+      "id": "10.7717/peerj-cs.93",
+      "title": "Predicting judicial decisions of the European court of human rights: a natural language processing perspective",
+      "abstract": "Recent advances in Natural Language Processing and Machine Learning provide us with the tools to build predictive models that can be used to unveil patterns driving judicial decisions. This can be useful, for both lawyers and judges, as an assisting tool to rapidly identify cases and extract patterns which lead to certain decisions. This paper presents the first systematic study on predicting the outcome of cases tried by the European Court of Human Rights based solely on textual content. We formulate a binary classification task where the input of our classifiers is the textual content extracted from a case and the target output is the actual judgment as to whether there has been a violation of an article of the convention of human rights. Textual information is represented using contiguous word sequences, i.e., N-grams, and topics. Our models can predict the court’s decisions with a strong accuracy (79% on average). Our empirical analysis indicates that the formal facts of a case are the most important predictive factor. This is consistent with the theory of legal realism suggesting that judicial decision-making is significantly affected by the stimulus of the facts. We also observe that the topical content of a case is another important feature in this classification task and explore this relationship further by conducting a qualitative analysis.",
+      "year": "2016",
+      "venue": "",
+      "doi": "10.7717/peerj-cs.93"
+    },
+    {
+      "id": "10.1145/3777009",
+      "title": "Natural Language Processing for the Legal Domain: A Survey of Tasks, Datasets, Models, and Challenges",
+      "abstract": "Natural Language Processing (NLP) is revolutionising the way both professionals and laypersons operate in the legal field. The considerable potential for NLP in the legal sector, especially in developing computational assistance tools for various legal processes, has captured the interest of researchers for years. This survey follows the Preferred Reporting Items for Systematic Reviews and Meta-Analyses framework, reviewing 154 studies, with a final selection of 131 after manual filtering. It explores foundational concepts related to NLP in the legal domain, illustrating the unique aspects and challenges of processing legal texts, such as extensive document lengths, complex language, and limited open legal datasets. We provide an overview of NLP tasks specific to legal text, such as Document Summarisation, Named Entity Recognition, Question Answering, Argument Mining, Text Classification, and Judgment Prediction. Furthermore, we analyse both developed legal-oriented language models, and approaches for adapting general-purpose language models to the legal domain. Additionally, we identify sixteen open research challenges, including the detection and mitigation of bias in artificial intelligence applications, the need for more robust and interpretable models, and improving explainability to handle the complexities of legal language and reasoning.",
+      "year": "2025",
+      "venue": "ACM Computing Surveys",
+      "doi": "10.1145/3777009"
+    },
+    {
+      "id": "10.1145/3709025.3712219",
+      "title": "A Reasoning-Focused Legal Retrieval Benchmark",
+      "abstract": "As the legal community increasingly examines the use of large language models (LLMs) for various legal applications, legal AI developers have turned to retrieval-augmented LLMs (\"RAG\" systems) to improve system performance and robustness. An obstacle to the development of specialized RAG systems is the lack of realistic legal RAG benchmarks which capture the complexity of both legal retrieval and downstream legal question-answering. To address this, we introduce two novel legal RAG benchmarks: Bar Exam QA and Housing Statute QA. Our tasks correspond to real-world legal research tasks, and were produced through annotation processes which resemble legal research. We describe the construction of these benchmarks and the performance of existing retriever pipelines. Our results suggest that legal RAG remains a challenging application, thus motivating future research.",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": "10.1145/3709025.3712219"
+    },
+    {
+      "id": "10.1109/re59067.2024.00065",
+      "title": "Enhancing Legal Compliance and Regulation Analysis with Large Language Models",
+      "abstract": "This research explores the application of Large Language Models (LLMs) for automating the extraction of requirement-related legal content in the food safety domain and checking legal compliance of regulatory artifacts. With Industry 4.0 revolutionizing the food industry and with the General Data Protection Regulation (GDPR) reshaping privacy policies and data processing agreements, there is a growing gap between regulatory analysis and recent technological advancements. This study aims to bridge this gap by leveraging LLMs, namely BERT and GPT models, to accurately classify legal provisions and automate compliance checks. Our findings demonstrate promising results, indicating LLMs' significant potential to enhance legal compliance and regulatory analysis efficiency, notably by reducing manual workload and improving accuracy within reasonable time and financial constraints.",
+      "year": "2024",
+      "venue": "2024 IEEE 32nd International Requirements Engineering Conference (RE)",
+      "doi": "10.1109/re59067.2024.00065"
+    },
+    {
+      "id": "10.1109/inista55318.2022.9894051",
+      "title": "Traditional Machine Learning and Deep Learning-based Text Classification for Turkish Law Documents using Transformers and Domain Adaptation",
+      "abstract": "Natural Language Processing (NLP) is an interdisciplinary field between linguistics and computer science. Its main aim is to process natural (human) language using computer programs. Text classification is one of the main tasks of this field, and they are widely used in many different applications such as spam filtering, sentiment analysis, and document categorization. Nonetheless, there is only very little text classification work in the law domain and even less for the Turkish language. This may be attributed to the complexity within the domain. The length, complexity of documents, and use of extensive technical jargon are some of the reasons that distinguish this domain from others. Similar to the medical domain, understanding these documents requires extensive specialization. Another reason can be the scarcity of publicly available datasets. In this study, we compile sizeable unsupervised and supervised datasets from publicly available sources and experiment with several classification algorithms ranging from traditional classifiers to much more complicated deep learning and transformer-based models along with different text representations. We focus on classifying Court of Cassation decisions for their crime labels. Interestingly, the majority of the models we experiment with could be able to obtain good results. This suggests that although understanding the documents in the legal domain is complicated and requires expertise from humans, it may be relatively easier for machine learning models despite the extensive presence of the technical terms. This seems to be especially the case for transformer-based pre-trained neural language models which can be adapted to the law domain, showing high potential for future real-world applications.",
+      "year": "2022",
+      "venue": "2022 International Conference on INnovations in Intelligent SysTems and Applications (INISTA)",
+      "doi": "10.1109/inista55318.2022.9894051"
+    },
+    {
+      "id": "10.1007/s10506-022-09317-8",
+      "title": "Patterns for legal compliance checking in a decidable framework of linked open data",
+      "abstract": "This paper presents an approach for legal compliance checking in the Semantic Web which can be effectively applied for applications in the Linked Open Data environment. It is based on modeling deontic norms in terms of ontology classes and ontology property restrictions. It is also shown how this approach can handle norm defeasibility. Such methodology is implemented by decidable fragments of OWL 2, while legal reasoning is carried out by available decidable reasoners. The approach is generalised by presenting patterns for modeling deontic norms and norms compliance checking.",
+      "year": "2022",
+      "venue": "Artificial Intelligence and Law",
+      "doi": "10.1007/s10506-022-09317-8"
+    },
+    {
+      "id": "10.18653/v1/2025.findings-emnlp.646",
+      "title": "CLaw: Benchmarking Chinese Legal Knowledge in Large Language Models - A Fine-grained Corpus and Reasoning Analysis",
+      "abstract": "Large Language Models (LLMs) are increasingly tasked with analyzing legal texts and citing relevant statutes, yet their reliability is often compromised by general pre-training that ingests legal texts without specialized focus, obscuring the true depth of their legal knowledge.This paper introduces CLAW, a novel benchmark specifically engineered to meticulously evaluate LLMs on Chinese legal knowledge and its application in reasoning.CLAW comprises two key components: (1) a comprehensive, fine-grained corpus of all 306 Chinese national statutes, segmented to the subparagraph level and incorporating precise historical revision timesteps for rigorous recall evaluation (64,849 entries), and (2) a challenging set of 254 case-based reasoning instances derived from China Supreme Court curated materials to assess the practical application of legal knowledge.Our empirical evaluation reveals that most contemporary LLMs significantly struggle to faithfully reproduce legal provisions.As accurate retrieval and citation of legal provisions form the basis of legal reasoning, this deficiency critically undermines the reliability of their responses.We contend that achieving trustworthy legal reasoning in LLMs requires a robust synergy of accurate knowledge retrieval-potentially enhanced through supervised fine-tuning (SFT) or retrieval-augmented generation (RAG)-and strong general reasoning capabilities.This work provides an essential benchmark and critical insights for advancing domain-specific LLM reasoning, particularly within the complex legal sphere.",
+      "year": "2025",
+      "venue": "Findings of the Association for Computational Linguistics: EMNLP 2025",
+      "doi": "10.18653/v1/2025.findings-emnlp.646"
+    },
+    {
+      "id": "2610.01345v1",
+      "title": "ARCCS: An Automated Regulatory Compliance Checking System",
+      "abstract": "Regulatory compliance checking - deciding whether a target document satisfies the obligations of a regulation - requires interpreting dense legal text, identifying which provisions apply, and grounding each decision in explicit evidence. We present ARCCS, an end-to-end, automated, agentic, and regulation-agnostic Legal NLP system for compliance checking. ARCCS decomposes raw regulatory text into atomic, traceable requirements and evaluates a target document against them using retrieved evidence, confidence scores, and human-interpretable justifications. This design decouples compliance assessment from any fixed regulatory template or predefined rule set, enabling the pipeline to operate over regulations of varying size and structure. We evaluate ARCCS in two complementary settings. First, in a GDPR policy-document evaluation, LLM-based judges find its decisions and justifications legally and evidentially consistent in up to 96.67% of the assessed cases. Second, on an EU public-procurement benchmark comprising more than 1,200 individual rule checks, the system attains 98.8% accuracy in violation detection. ARCCS is, to our knowledge, the first fully open-source system for end-to-end regulatory compliance checking and auditable report generation.",
+      "year": "2026",
+      "venue": "arXiv",
+      "doi": ""
+    },
+    {
+      "id": "2209.09722v2",
+      "title": "NLP-based Automated Compliance Checking of Data Processing Agreements against GDPR",
+      "abstract": "Processing personal data is regulated in Europe by the General Data Protection Regulation (GDPR) through data processing agreements (DPAs). Checking the compliance of DPAs contributes to the compliance verification of software systems as DPAs are an important source of requirements for software development involving the processing of personal data. However, manually checking whether a given DPA complies with GDPR is challenging as it requires significant time and effort for understanding and identifying DPA-relevant compliance requirements in GDPR and then verifying these requirements in the DPA. In this paper, we propose an automated solution to check the compliance of a given DPA against GDPR. In close interaction with legal experts, we first built two artifacts: (i) the \"shall\" requirements extracted from the GDPR provisions relevant to DPA compliance and (ii) a glossary table defining the legal concepts in the requirements. Then, we developed an automated solution that leverages natural language processing (NLP) technologies to check the compliance of a given DPA against these \"shall\" requirements. Specifically, our approach automatically generates phrasal-level representations for the textual content of the DPA and compares it against predefined representations of the \"shall\" requirements. Over a dataset of 30 actual DPAs, the approach correctly finds 618 out of 750 genuine violations while raising 76 false violations, and further correctly identifies 524 satisfied requirements. The approach has thus an average precision of 89.1%, a recall of 82.4%, and an accuracy of 84.6%. Compared to a baseline that relies on off-the-shelf NLP tools, our approach provides an average accuracy gain of ~20 percentage points. The accuracy of our approach can be improved to ~94% with limited manual verification effort.",
+      "year": "2022",
+      "venue": "arXiv",
+      "doi": ""
+    },
+    {
+      "id": "10.3233/FAIA251597",
+      "title": "Segmentation and Processing of German Court Decisions from Open Legal Data",
+      "abstract": "The availability of structured legal data is important for advancing Natural Language Processing (NLP) techniques for the German legal system. One of the most widely used datasets, Open Legal Data, provides a large-scale collection of German court decisions. While the metadata in this raw dataset is consistently structured, the decision texts themselves are inconsistently formatted and often lack clearly marked sections. Reliable separation of these sections is important not only for rhetorical role classification but also for downstream tasks such as retrieval and citation analysis. In this work, we introduce a cleaned and sectioned dataset of 251,038 German court decisions derived from the official Open Legal Data dataset. We systematically separated three important sections in German court decisions, namely Tenor (operative part of the decision), Tatbestand (facts of the case), and Entscheidungsgründe (judicial reasoning), which are often inconsistently represented in the original dataset. To ensure the reliability of our extraction process, we used Cochran's formula with a 95% confidence level and a 5% margin of error to draw a statistically representative random sample of 384 cases, and manually verified that all three sections were correctly identified. We also extracted the Rechtsmittelbelehrung (appeal notice) as a separate field, since it is a procedural instruction and not part of the decision itself. The resulting corpus is publicly available in the JSONL format, making it an accessible resource for further research on the German legal system.",
+      "year": "2026",
+      "venue": "Legal Knowledge and Information Systems, Frontiers in Artificial Intelligence and Applications, Vol. 416, IOS Press, 2025, pp. 276--281",
+      "doi": "10.3233/FAIA251597"
+    }
+  ],
+  "off": [
+    {
+      "id": "10.1017/s1352325200061036",
+      "title": "HOW MORAL PRINCIPLES CAN ENTER INTO THE LAW",
+      "abstract": "In recent times, especially in the pages of this journal, the debate between the proponents of the two principal species of legal positivism has gained new vigor. Specifically, some champions of Exclusive Legal Positivism have sophisticatedly challenged the Inclusive Legal Positivists’ claim that moral principles can figure among the criteria by which the officials of a legal system ascertain the law. The present essay attempts to parry the most formidable of those recent challenges.My focus will lie chiefly on Scott Shapiro, On Hart’s Way Out, 4 LEGAL THEORY 469 (1998) [hereinafter cited as Shapiro, Way]. For a couple of other recent contributions to the debate, from the camp of Exclusive Legal Positivism, see Scott Shapiro, The Difference that Rules Make, in Brian Bix (ed.), ANALYZING LAW 33, 56–61 (1998); Brian Leiter, Realism, Hard Positivism, and Conceptual Analysis, 4 LEGAL THEORY 533 (1998).",
+      "year": "2000",
+      "venue": "Legal Theory",
+      "doi": "10.1017/s1352325200061036"
+    },
+    {
+      "id": "10.3233/FAIA251597",
+      "title": "Segmentation and Processing of German Court Decisions from Open Legal Data",
+      "abstract": "The availability of structured legal data is important for advancing Natural Language Processing (NLP) techniques for the German legal system. One of the most widely used datasets, Open Legal Data, provides a large-scale collection of German court decisions. While the metadata in this raw dataset is consistently structured, the decision texts themselves are inconsistently formatted and often lack clearly marked sections. Reliable separation of these sections is important not only for rhetorical role classification but also for downstream tasks such as retrieval and citation analysis. In this work, we introduce a cleaned and sectioned dataset of 251,038 German court decisions derived from the official Open Legal Data dataset. We systematically separated three important sections in German court decisions, namely Tenor (operative part of the decision), Tatbestand (facts of the case), and Entscheidungsgründe (judicial reasoning), which are often inconsistently represented in the original dataset. To ensure the reliability of our extraction process, we used Cochran's formula with a 95% confidence level and a 5% margin of error to draw a statistically representative random sample of 384 cases, and manually verified that all three sections were correctly identified. We also extracted the Rechtsmittelbelehrung (appeal notice) as a separate field, since it is a procedural instruction and not part of the decision itself. The resulting corpus is publicly available in the JSONL format, making it an accessible resource for further research on the German legal system.",
+      "year": "2026",
+      "venue": "Legal Knowledge and Information Systems, Frontiers in Artificial Intelligence and Applications, Vol. 416, IOS Press, 2025, pp. 276--281",
+      "doi": "10.3233/FAIA251597"
+    },
+    {
+      "id": "10.1016/s0953-5438(98)00048-4",
+      "title": "A co-operative scenario based approach to acquisition and validation of system requirements: How exceptions can help!",
+      "abstract": "",
+      "year": "1999",
+      "venue": "Interacting with Computers",
+      "doi": "10.1016/s0953-5438(98)00048-4"
+    },
+    {
+      "id": "2510.07243v1",
+      "title": "LeMAJ (Legal LLM-as-a-Judge): Bridging Legal Reasoning and LLM Evaluation",
+      "abstract": "Evaluating large language model (LLM) outputs in the legal domain presents unique challenges due to the complex and nuanced nature of legal analysis. Current evaluation approaches either depend on reference data, which is costly to produce, or use standardized assessment methods, both of which have significant limitations for legal applications. Although LLM-as-a-Judge has emerged as a promising evaluation technique, its reliability and effectiveness in legal contexts depend heavily on evaluation processes unique to the legal industry and how trustworthy the evaluation appears to the human legal expert. This is where existing evaluation methods currently fail and exhibit considerable variability. This paper aims to close the gap: a) we break down lengthy responses into 'Legal Data Points' (LDPs), self-contained units of information, and introduce a novel, reference-free evaluation methodology that reflects how lawyers evaluate legal answers; b) we demonstrate that our method outperforms a variety of baselines on both our proprietary dataset and an open-source dataset (LegalBench); c) we show how our method correlates more closely with human expert evaluations and helps improve inter-annotator agreement; and finally d) we open source our Legal Data Points for a subset of LegalBench used in our experiments, allowing the research community to replicate our results and advance research in this vital area of LLM evaluation on legal question-answering.",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": ""
+    },
+    {
+      "id": "2610.25159v1",
+      "title": "Legal Guidance in the Wild: How Users Seek Legal Help in Real-World LLM Conversations",
+      "abstract": "People ask conversational AI models about their legal rights, obligations, procedures, and personal situations that may have legal consequences. To study this behavior, we first need to distinguish requests for legal guidance from other legally themed discussions and unrelated conversations. We contribute a multi-axis taxonomy of legal queries capturing whether legal guidance is sought, how a request is formulated, and which legal domains it concerns; apply it to 2,122 naturally occurring WildChat-1M conversations; and create a human-reviewed gold evaluation set of 200 conversations. All annotations, model checkpoints, and evaluation code are publicly available. In this enriched sample, 71.1% of conversations containing legal content seek personalized or practical guidance. Rights-and-options advice is the most common primary request type among legal-content conversations, and 25.3% of guidance-positive conversations span multiple legal topics. The gold evaluation set supports a two-stage comparison of ModernBERT-base and ModernBERT-large against a TF-IDF cascade. Our framework supports large-scale studies of legal guidance in conversational AI, and the public release of the annotated data facilitates reproducible research and future model development.",
+      "year": "2026",
+      "venue": "arXiv",
+      "doi": ""
+    },
+    {
+      "id": "10.1007/s10506-026-09525-6",
+      "title": "LLM-assisted formalization for deterministic detection of statutory inconsistency in tax law",
+      "abstract": "",
+      "year": "2026",
+      "venue": "Artificial Intelligence and Law",
+      "doi": "10.1007/s10506-026-09525-6"
+    },
+    {
+      "id": "10.21203/rs.3.rs-8301991/v1",
+      "title": "Automated Transformation of Financial Regulations into SBVR: An Ontology-Based and Natural Language Processing Approach",
+      "abstract": "Institutions face regulatory complexity, where traditional Governance, Risk, and Compliance (GRC) approaches are often reactive and prone to errors. Legal language also introduces ambiguity into compliance traceability. Recent advances in Natural Language Processing (NLP) offer potential solutions for interpreting regulations. This study introduces CFR2SBVR, an automated method for transforming natural-language financial regulations into structured vocabularies and rules aligned with the Semantics of Business Vocabulary and Business Rules (SBVR) standard, thereby making it easier to trace regulatory requirements to business operations. The method combines NLP techniques, Large Language Models (LLMs), and ontology mappings, such as the Financial Industry Business Ontology (FIBO), to extract, classify, and formalize regulatory content from the U.S. Code of Federal Regulations (CFR). Grounded in the Design Science Research (DSR) framework (Wieringa, 2014), this study develops and validates artifacts through multiple checkpoints, ensuring traceability between original texts and transformed statements. The evaluation employed semantic similarity metrics (SemScore and LLM-as-a-Judge) and SME validation, achieving an average accuracy of 0.85 or higher and an overall accuracy of 95.81%. Compared to deterministic and hybrid approaches, CFR2SBVR demonstrates greater adaptability and scalability, particularly in managing ambiguity and responding to changing regulatory requirements. All datasets, source code, and results are publicly available to promote reproducibility and further research in GRC.",
+      "year": "2025",
+      "venue": "",
+      "doi": "10.21203/rs.3.rs-8301991/v1"
+    },
+    {
+      "id": "2301.06901v1",
+      "title": "Graph-based Keyword Planning for Legal Clause Generation from Topics",
+      "abstract": "Generating domain-specific content such as legal clauses based on minimal user-provided information can be of significant benefit in automating legal contract generation. In this paper, we propose a controllable graph-based mechanism that can generate legal clauses using only the topic or type of the legal clauses. Our pipeline consists of two stages involving a graph-based planner followed by a clause generator. The planner outlines the content of a legal clause as a sequence of keywords in the order of generic to more specific clause information based on the input topic using a controllable graph-based mechanism. The generation stage takes in a given plan and generates a clause. The pipeline consists of a graph-based planner followed by text generation. We illustrate the effectiveness of our proposed two-stage approach on a broad set of clause topics in contracts.",
+      "year": "2023",
+      "venue": "arXiv",
+      "doi": ""
+    },
+    {
+      "id": "10.1093/aler/3.2.376",
+      "title": "How to Explain Japan's Legal System",
+      "abstract": "",
+      "year": "2001",
+      "venue": "American Law and Economics Review",
+      "doi": "10.1093/aler/3.2.376"
+    },
+    {
+      "id": "10.3233/FAIA251585",
+      "title": "PersonaMatrix: A Recipe for Persona-Aware Evaluation of Legal Summarization",
+      "abstract": "Legal documents are often long, dense, and difficult to comprehend, not only for laypeople but also for legal experts. While automated document summarization has great potential to improve access to legal knowledge, prevailing task-based evaluators overlook divergent user and stakeholder needs. Tool development is needed to encompass the technicality of a case summary for a litigator yet be accessible for a self-help public researching for their lawsuit. We introduce PersonaMatrix, a persona-by-criterion evaluation framework that scores summaries through the lens of six personas, including legal and non-legal users. We also introduce a controlled dimension-shifted pilot dataset of U.S. civil rights case summaries that varies along depth, accessibility, and procedural detail as well as Diversity-Coverage Index (DCI) to expose divergent optima of legal summary between persona-aware and persona-agnostic judges. This work enables refinement of legal AI summarization systems for both expert and non-expert users, with the potential to increase access to legal knowledge. The code base and data are publicly available in GitHub.",
+      "year": "2025",
+      "venue": "JURIX (Legal Knowledge and Information Systems), 416, 2025",
+      "doi": "10.3233/FAIA251585"
+    }
+  ],
+  "seconds": 3252
+}
