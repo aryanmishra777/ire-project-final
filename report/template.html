@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Final Report</title>
+<style>
+[[css]]
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 ============ -->
+<section class="page">
+  <header class="masthead">
+    <div class="kicker">CS4.406 Information Retrieval and Extraction &nbsp;·&nbsp; Monsoon 2026 &nbsp;·&nbsp; Final report</div>
+    <h1>Does LLM Query Rewriting Actually Improve Scholarly Retrieval?</h1>
+    <div class="meta"><span>Aryan Mishra</span><span>Team Solo Retriever (1 member)</span><span>November 2026</span></div>
+  </header>
+
+  <h2><span class="num">1</span>Project summary</h2>
+  <p>Many search pipelines ask an LLM to rewrite the user's question before they search. The step is usually reported as one part of a bigger system, so its own effect is hard to see, and the extra LLM call is rarely priced. I measured the rewrite step alone on LitSearch, with BM25 and with a dense retriever, and checked the result on real questions from seven students.</p>
+
+  <div class="rq">
+    <div><span class="lbl">Research question</span>In scholarly literature search, does LLM query rewriting improve retrieval over the raw question, by how much, under which retriever, and at what token and latency cost?</div>
+    <div><span class="lbl">Hypothesis and verdict</span>Rewriting helps BM25 clearly and dense retrieval much less. <b>Partly supported:</b> BM25 gains significantly more for [[n_inter_sig]] of the 4 rewrites, and HyDE helps both retrievers.</div>
+  </div>
+
+  <h2><span class="num">2</span>Set-up</h2>
+  <p>597 real literature-search questions over 64,183 ACL and ICLR papers (titles and abstracts). Retrievers: BM25 and E5-large-v2, both baselines in the LitSearch paper. The rewriter is Qwen 3.6 (35B mixture-of-experts) run locally at temperature 0, every call cached. Each question runs in 10 cells: 2 retrievers × (raw question + 4 rewrites: rephrasing, term expansion, a HyDE-style abstract, multi-query with RRF fusion). Comparisons are paired by question: paired bootstrap (10,000 resamples) for the 95% CI, a randomisation test for p, Benjamini–Hochberg correction over the 8 comparisons per metric. The hypothesis is the difference between the BM25 gain and the dense gain.</p>
+  <p><b class="sans" style="font-size:8.8pt">Baseline check.</b> Against LitSearch's Table 3, E5 is within [[gap_e5]] points on the averaged measures. BM25 runs up to [[gap_bm25_max]] points higher, probably because my BM25 stems words and drops stopwords. So the dense baseline reproduces, and BM25 is a stronger baseline than the paper's, which makes gains harder to get. Raw nDCG@10 is [[ndcg_raw_bm25]] (BM25) and [[ndcg_raw_dense]] (dense).</p>
+
+  <h2><span class="num">3</span>Results on LitSearch</h2>
+  <figure>
+    <img src="[[fig_effects]]" alt="Change in nDCG@10 per rewrite" style="width:72%;margin:0 auto">
+    <figcaption><b>Figure 1. Change in nDCG@10 against the raw question, with 95% intervals.</b> Blue is BM25, orange is dense. With BM25, [[n_sig_bm25]] of 4 rewrites help significantly; with dense, [[n_sig_dense]] of 4. None hurt significantly.</figcaption>
+  </figure>
+
+  <table class="res">
+    <thead><tr><th rowspan="2">Rewrite</th><th colspan="2">Δ nDCG@10 [95% CI]</th><th colspan="2">Δ recall@50</th></tr>
+      <tr><th>BM25</th><th>Dense</th><th>BM25</th><th>Dense</th></tr></thead>
+    <tbody>[[effect_rows]]</tbody>
+  </table>
+  <p class="small" style="margin-top:3px"><b>Table 1.</b> Bold means significant after Benjamini–Hochberg correction (q &lt; 0.05). HyDE is the best rewrite for both retrievers ([[hyde_bm25]] BM25, [[hyde_dense]] dense, nDCG@10). Recall@50 improves significantly in [[n_r50_sig]] of 8 settings.</p>
+
+  <div class="foot"><span>Aryan Mishra · CS4.406 final report</span><span>1 / 2</span></div>
+</section>
+
+<!-- ============ PAGE 2 ============ -->
+<section class="page">
+
+    <div class="cols" style="margin-top:0">
+    <div>
+      <h3>The hypothesis, as an interaction</h3>
+      <table class="res">
+        <thead><tr><th>Rewrite</th><th>BM25 gain</th><th>Dense gain</th><th>Difference [95% CI]</th><th>q</th></tr></thead>
+        <tbody>[[inter_rows]]</tbody>
+      </table>
+      <p class="small" style="margin-top:3px"><b>Table 2.</b> nDCG@10. The difference is the BM25 gain minus the dense gain.</p>
+    </div>
+    <div>
+      <h3>What each rewrite costs</h3>
+      <table class="res">
+        <thead><tr><th>Rewrite</th><th>Tokens</th><th>Output</th><th>p95 delay</th></tr></thead>
+        <tbody>[[cost_rows]]</tbody>
+      </table>
+      <p class="small" style="margin-top:3px"><b>Table 3.</b> One LLM call per query, on an AWS L4 GPU. Raw costs nothing.</p>
+    </div>
+  </div>
+
+
+  <h2><span class="num">4</span>Where rewriting fails</h2>
+  <p>I expected the rewrite to drop the one rare term that points to the right paper (a term in fewer than 100 papers). It did so in [[n_lost]] of [[n_ft]] questions, but on average that cost nothing. And of the [[n_big]] questions where BM25 lost half or more of its nDCG, [[n_big_lost]] had dropped a rare term. The big losses come from a rewrite that keeps the topic but loses the exact wording of the gold paper. Averages hide spread: term expansion under BM25 made [[expand_losses]] questions worse although its mean is positive. HyDE costs the most: about [[tok_hyde]] tokens and a p95 delay of [[p95_hyde]] s per query.</p>
+
+  <h2 class="study"><span class="num">5</span>Pilot with real questions <span class="tag">small pilot, judged by the researcher</span></h2>
+  <p>The professor asked for a test with people. Seven students each gave one question from their own work, in their own words. My literature-review tool ran each question twice, with its LLM query-understanding step on and bypassed. The two top-10 lists were pooled and shuffled, and I graded every paper myself, blind to the run. The participants had no time to rate papers, so <b>the relevance grades and the fidelity scores are mine, not theirs</b>. One further question (P01) was my own dry run and stays out of the numbers.</p>
+
+  <div class="tiles">
+    <div class="tile"><div class="v">[[s_n]]</div><div class="k">questions in the analysis</div></div>
+    <div class="tile"><div class="v">[[s_off]] → [[s_on]]</div><div class="k">nDCG@10, original → rewrite</div></div>
+    <div class="tile"><div class="v">[[s_w]] of [[s_n]]</div><div class="k">questions improved</div></div>
+    <div class="tile"><div class="v">p = [[s_p]]</div><div class="k">not significant; MDE [[s_mde]]</div></div>
+  </div>
+
+  <div class="cols">
+    <div>
+      <figure style="margin:0"><img src="[[fig_study]]" alt="Study results"></figure>
+      <p class="small" style="margin-top:3px"><b>Figure 2. Pilot results.</b> Each point is one of the [[s_n]] questions.</p>
+    </div>
+    <div>
+      <p>The rewrite raised nDCG@10 by [[s_d]] (95% CI [[[s_ci]]]), far more than the best gain on LitSearch. A likely reason is that, without the rewrite, a long question goes straight to the Crossref and arXiv search engines, which handle long questions badly. That is my reading, not something the pilot proves.</p>
+      <p>Mean fidelity (how much of the question the rewrite kept, 1 to 5) is [[s_fid]]. Fidelity and gain correlate at ρ = [[s_rho]]: the rewrites that kept less of the question gained more. With [[s_n]] questions and one judge, it is only a lead.</p>
+    </div>
+  </div>
+
+  <h2><span class="num">6</span>Limits</h2>
+  <p>One benchmark (NLP and ML papers) and one rewriting model. Most LitSearch questions have one or two gold papers, so a relevant paper outside the gold set counts as a miss. Prompts were not tuned, on purpose. The pilot has [[s_n]] questions and one judge who knows the hypothesis.</p>
+
+  <div class="two">
+    <div class="box change">
+      <h4>What changed since the mid-submission</h4>
+      <ul>
+        <li><span class="add">Changed</span>the dense retriever is E5-large-v2, the LitSearch paper's own baseline, instead of bge-small or MiniLM, so the baselines can be checked.</li>
+        <li><span class="add">Changed</span>the pilot has [[s_n]] questions from [[s_n]] students, not 15 to 20 participants, and the researcher graded relevance.</li>
+        <li><span class="drop">Dropped</span>the DORIS-MAE check, as planned.</li>
+        <li><span class="keep">Unchanged</span>the factorial, the statistics, and the rule that no LLM writes relevance judgments.</li>
+      </ul>
+    </div>
+    <div class="box links">
+      <h4>Code and video</h4>
+      <p class="small">Every number here is read from the result files in <code>results/</code>; cached rewrites let it be reproduced without the LLM. The video narration uses a clone of the author's own voice.</p>
+    </div>
+  </div>
+
+  <div class="foot"><span>Aryan Mishra · CS4.406 final report</span><span>2 / 2</span></div>
+</section>
+
+</body>
+</html>

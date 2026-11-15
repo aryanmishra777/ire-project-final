@@ -9,3 +9,8 @@ slides/build/
 *.pyc
 
 ~$*
+
+# Generated outputs and cloned-voice audio (never publish)
+video/voice/
+video/presentation.mp4
+report/report.html

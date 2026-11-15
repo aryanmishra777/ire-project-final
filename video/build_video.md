@@ -14,6 +14,8 @@ speaker notes, built by `slides/build_deck.py`.
 2. **Voice:** `edge-tts` reads each slide's notes into `voice_NN.mp3`. The default voice is
    `en-IN-PrabhatNeural`; any edge-tts voice can be passed with `--voice`, and the speed with
    `--rate`.
+   With `--audio-dir`, this step is skipped: the folder's `voice_NN.wav` files (made by
+   `chatterbox_tts.py` from the same notes) are used instead, and the script stops if one is missing.
 3. **Clips:** ffmpeg pairs each PNG with its MP3, adds 0.7 s of silence, and encodes H.264 + AAC
    at 30 fps.
 4. **Join:** the ffmpeg concat demuxer stitches the clips without re-encoding.
@@ -28,3 +30,6 @@ speaker notes, built by `slides/build_deck.py`.
   the rest, and joining same-format clips needs no second encode.
 - **A short pause after each slide.** It gives the viewer a beat to read the slide before the
   next one starts.
+- **Cloned voice kept out of this file.** Chatterbox needs torch and a GPU, neither of which the
+  project `.venv` has. `chatterbox_tts.py` therefore runs in its own venv (or on AWS), and this
+  file only consumes its WAVs. That keeps the project's dependencies unchanged.

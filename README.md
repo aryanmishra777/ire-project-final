@@ -26,7 +26,8 @@ generated from those files, so they always agree with them.
 | Code | `rewrite_eval/`, `study/`, `demo/` | — |
 | Results | `results/` | `python -m rewrite_eval analyze` |
 | Slide deck | `slides/deck.pptx` (+ `slides/narration.md`) | `python -m slides.build_deck` |
-| Narrated video | `video/presentation.mp4` | `python -m video.build_video` |
+| Report (PDF) | `../Final Report - Aryan Mishra.pdf` | `python -m report.build_report` |
+| Narrated video | `video/presentation.mp4` (built locally, not stored in the repo) | `python -m video.build_video` (voice: `video/chatterbox_tts.py`) |
 | Demo | `demo/compare.py` | `python -m demo.compare --qid q042` |
 
 ## What's in the code
