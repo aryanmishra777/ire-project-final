@@ -19,6 +19,12 @@ one number used here, the query count, comes from `facts` rather than being type
 ## Why
 - **Notes as narration.** The deck and the video then share one script, so they can't disagree.
   The notes are also there for a live presentation.
+- **The motivation slide shows the step instead of describing it.** A four-box pipeline highlights
+  the rewrite step under test. Under it is a real LitSearch question next to the rewrite Qwen
+  actually produced for it (`facts.example_rewrite`, read from the rewrite cache). Seeing one
+  question turn into a string of terms explains the subject faster than abstract bullets. The
+  three reasons it matters (common, effect hidden, costs every query) follow, ending on the
+  project's question.
 - **Related work as a table.** It shows each line of work next to what it leaves open, which
   makes the gap visible at a glance instead of in a paragraph.
 - **Claims kept to what was checked.** Two statements were confirmed from the papers themselves:

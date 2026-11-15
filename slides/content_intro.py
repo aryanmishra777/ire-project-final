@@ -2,9 +2,10 @@
 the narration for the video, written as Aryan presenting to the professor."""
 from __future__ import annotations
 
+from pptx.enum.text import PP_ALIGN
 from pptx.util import Inches
 
-from .theme import (ACCENT, H, INK, MARGIN, RULE, W, WHITE, blank, bullets, footer, panel,
+from .theme import (ACCENT, H, INK, LIGHT, MARGIN, RULE, W, WHITE, blank, bullets, footer, panel,
                     table, text, title)
 
 
@@ -23,22 +24,45 @@ def s_title(prs, f):
 
 
 def s_motivation(prs, f):
-    s = blank(prs, "Most retrieval pipelines today put an LLM between the question and the index. "
-                   "The question gets rewritten, expanded, or turned into a fake abstract, and "
-                   "only then do we search. The trouble is that this step is almost never measured "
-                   "on its own. Papers report the whole pipeline beating BM25, so the gain could "
-                   "come from the dense retriever or the reranker instead. And the step is not "
-                   "free: it adds an LLM call to every query.")
-    title(s, "An LLM now sits in front of most search pipelines", "Motivation")
-    bullets(s, ["The user's question is rewritten, expanded or turned into a hypothetical answer "
-                "before retrieval. Many RAG stacks do this by default.",
-                "Its own contribution is rarely isolated: gains are reported for whole pipelines, "
-                "so they could come from the retriever, reranker or fusion step.",
-                "It costs an LLM call on every query: tokens on the bill and latency on the "
-                "critical path.",
-                "Scholarly search is built by small academic groups on small budgets, exactly "
-                "where an unmeasured default gets copied from paper to paper."],
-            MARGIN, Inches(1.8), Inches(11.6), Inches(4.8), 20, 16)
+    q, rw = f["example_q"]
+    s = blank(prs, "Here is the problem. Many search systems now add one step before they search: "
+                   "an LLM rewrites the user's question. Take this question from the benchmark. "
+                   "The LLM turns it into a short string of technical terms, and the system "
+                   "searches with that instead of the question. The step has become common, but "
+                   "its effect is rarely measured on its own. Papers usually report a whole "
+                   "pipeline beating a keyword baseline, so the gain could just as well come from "
+                   "a better retriever or a reranker. And the step costs something every time: one "
+                   "extra LLM call per query, which adds tokens and delay. So I wanted to know "
+                   "whether the rewrite step itself helps, and whether it is worth paying for.")
+    title(s, "The problem: a common step that is rarely measured", "Motivation")
+    steps = ["User's question", "LLM rewrites it", "Search engine", "Ranked papers"]
+    for i, label in enumerate(steps):
+        x, hot = MARGIN + i * Inches(3.05), i == 1
+        panel(s, x, Inches(1.8), Inches(2.45), Inches(0.75), fill=ACCENT if hot else LIGHT)
+        text(s, label, x, Inches(1.97), Inches(2.45), Inches(0.5), 16, WHITE if hot else INK,
+             True, PP_ALIGN.CENTER)
+        if i < 3:
+            arrow = s.shapes.add_shape(33, x + Inches(2.55), Inches(2.02), Inches(0.42),
+                                       Inches(0.32))
+            arrow.fill.solid()
+            arrow.fill.fore_color.rgb = RULE
+            arrow.line.fill.background()
+            arrow.shadow.inherit = False
+    text(s, "the step this project tests", MARGIN + Inches(3.05), Inches(2.6), Inches(2.45),
+         Inches(0.3), 11, ACCENT, True, PP_ALIGN.CENTER)
+    panel(s, MARGIN, Inches(3.05), Inches(11.9), Inches(1.15))
+    text(s, f"Question:  {q}\nRewrite:  {rw}", MARGIN + Inches(0.25), Inches(3.15), Inches(11.4),
+         Inches(1.0), 14, INK)
+    points = [("Common", "Many search and RAG systems add this step by default."),
+              ("Effect hidden", "Papers report whole pipelines, so a gain could come from the "
+               "retriever or a reranker instead."),
+              ("Costs every query", "One extra LLM call per search: more tokens, more delay.")]
+    for i, (head, body) in enumerate(points):
+        x = MARGIN + i * Inches(4.05)
+        text(s, head, x, Inches(4.45), Inches(3.8), Inches(0.4), 16, ACCENT, True)
+        text(s, body, x, Inches(4.85), Inches(3.8), Inches(1.0), 14, INK)
+    text(s, "So: does the rewrite step itself help, and is it worth what it costs?", MARGIN,
+         Inches(6.2), Inches(11.9), Inches(0.5), 18, INK, True)
     footer(s, 2)
 
 

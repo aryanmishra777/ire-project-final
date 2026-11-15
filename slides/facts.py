@@ -66,7 +66,17 @@ def load() -> dict:
     big = terms[terms.delta_bm25 <= -0.5]
     f["n_big_loss"], f["n_big_loss_lost"] = len(big), int(big.lost_any.sum())
     f["study"] = study_facts()
+    f["example_q"] = example_rewrite()
     return f
+
+
+def example_rewrite(qid: str = "q000") -> tuple[str, str]:
+    """A real benchmark question and the rephrase Qwen produced for it, for the motivation slide."""
+    from rewrite_eval.config import LLM_PROVIDER
+    from rewrite_eval.data import load_queries
+    from rewrite_eval.rewrite import lookup
+    q = load_queries().set_index("qid").at[qid, "query"]
+    return q, lookup(q, "rephrase", LLM_PROVIDER)["output"]
 
 
 def study_facts() -> dict:

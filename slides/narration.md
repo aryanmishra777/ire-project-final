@@ -8,7 +8,7 @@ Good morning, sir. I'm Aryan Mishra, and this is my final presentation for the I
 
 ## Slide 2
 
-Most retrieval pipelines today put an LLM between the question and the index. The question gets rewritten, expanded, or turned into a fake abstract, and only then do we search. The trouble is that this step is almost never measured on its own. Papers report the whole pipeline beating BM25, so the gain could come from the dense retriever or the reranker instead. And the step is not free: it adds an LLM call to every query.
+Here is the problem. Many search systems now add one step before they search: an LLM rewrites the user's question. Take this question from the benchmark. The LLM turns it into a short string of technical terms, and the system searches with that instead of the question. The step has become common, but its effect is rarely measured on its own. Papers usually report a whole pipeline beating a keyword baseline, so the gain could just as well come from a better retriever or a reranker. And the step costs something every time: one extra LLM call per query, which adds tokens and delay. So I wanted to know whether the rewrite step itself helps, and whether it is worth paying for.
 
 ## Slide 3
 
