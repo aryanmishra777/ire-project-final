@@ -14,7 +14,7 @@
   <header class="masthead">
     <div class="kicker">CS4.406 Information Retrieval and Extraction &nbsp;·&nbsp; Monsoon 2026 &nbsp;·&nbsp; Final report</div>
     <h1>Does LLM Query Rewriting Actually Improve Scholarly Retrieval?</h1>
-    <div class="meta"><span>Aryan Mishra</span><span>Team Solo Retriever (1 member)</span><span>November 2026</span></div>
+    <div class="meta"><span>Aryan Mishra</span><span>Team Solo Retriever (1 member)</span></div>
   </header>
 
   <h2><span class="num">1</span>Project summary</h2>
@@ -69,7 +69,7 @@
 
 
   <h2><span class="num">4</span>Where rewriting fails</h2>
-  <p>I expected the rewrite to drop the one rare term that points to the right paper (a term in fewer than 100 papers). It did so in [[n_lost]] of [[n_ft]] questions, but on average that cost nothing. And of the [[n_big]] questions where BM25 lost half or more of its nDCG, [[n_big_lost]] had dropped a rare term. The big losses come from a rewrite that keeps the topic but loses the exact wording of the gold paper. Averages hide spread: term expansion under BM25 made [[expand_losses]] questions worse although its mean is positive. HyDE costs the most: about [[tok_hyde]] tokens and a p95 delay of [[p95_hyde]] s per query.</p>
+  <p>I expected the rewrite to drop the one rare term that points to the right paper (a term in fewer than 100 papers). It did so in [[n_lost]] of [[n_ft]] questions, but on average that cost nothing. And of the [[n_big]] questions where BM25 lost half or more of its nDCG, [[n_big_lost]] had dropped a rare term. In the worst case (q421) the rewrite kept the topic but lost the exact wording that matched the gold paper. Averages hide spread: term expansion under BM25 made [[expand_losses]] questions worse although its mean is positive. HyDE costs the most: about [[tok_hyde]] tokens and a p95 delay of [[p95_hyde]] s per query.</p>
 
   <h2 class="study"><span class="num">5</span>Pilot with real questions <span class="tag">small pilot, judged by the researcher</span></h2>
   <p>The professor asked for a test with people. Seven students each gave one question from their own work, in their own words. My literature-review tool ran each question twice, with its LLM query-understanding step on and bypassed. The two top-10 lists were pooled and shuffled, and I graded every paper myself, blind to the run. The participants had no time to rate papers, so <b>the relevance grades and the fidelity scores are mine, not theirs</b>. One further question (P01) was my own dry run and stays out of the numbers.</p>
@@ -100,7 +100,7 @@
       <h4>What changed since the mid-submission</h4>
       <ul>
         <li><span class="add">Changed</span>the dense retriever is E5-large-v2, the LitSearch paper's own baseline, instead of bge-small or MiniLM, so the baselines can be checked.</li>
-        <li><span class="add">Changed</span>the pilot has [[s_n]] questions from [[s_n]] students, not 15 to 20 participants, and the researcher graded relevance.</li>
+        <li><span class="add">Changed</span>the pilot has [[s_n]] questions from [[s_n]] students, not 15 to 20 participants, and the researcher judged both relevance and fidelity.</li>
         <li><span class="drop">Dropped</span>the DORIS-MAE check, as planned.</li>
         <li><span class="keep">Unchanged</span>the factorial, the statistics, and the rule that no LLM writes relevance judgments.</li>
       </ul>
